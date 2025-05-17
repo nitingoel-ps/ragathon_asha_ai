@@ -490,3 +490,8 @@ async def review_patient():
         return {"error": "Healthcare agent not initialized"}
     return await healthcare_agent.review_patient()
 
+# add another API to read the final_output.json file and return it as a response
+@app.get("/get-final-output")
+def get_final_output():
+    with open("final_output.json", "r") as f:
+        return json.load(f)
