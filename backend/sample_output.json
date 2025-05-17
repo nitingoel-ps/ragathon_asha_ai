@@ -1,1 +1,157 @@
-{"categories":[{"category_name":"Stress Management","activities":[{"action_name":"Mindfulness meditation","status":"Needs user confirmation","importance":"High","rationale":"Helps reduce anxiety and improves overall emotional well-being.","impact_of_not_doing":"Increased stress levels potentially leading to further anxiety issues.","frequency":"10-15 minutes daily","next_step_recommendation":"N/A","supporting_evidence":"No documentation in health records about meditation participation.","user_input_questions":["Have you practiced mindfulness meditation in the past week?","If yes, how many times did you meditate in the past week?"]},{"action_name":"Therapy sessions for anxiety management","status":"Needs user confirmation","importance":"High","rationale":"Professional support provides coping strategies for anxiety.","impact_of_not_doing":"Persistence of anxiety symptoms impacting daily functioning.","frequency":"At least once a week","next_step_recommendation":"N/A","supporting_evidence":"No specific information about completed therapy sessions.","user_input_questions":["Have you attended therapy sessions for anxiety in the past month?","Are you currently scheduled for future therapy sessions?"]},{"action_name":"Participate in community support groups","status":"Needs user confirmation","importance":"Medium","rationale":"Sharing experiences can enhance coping strategies.","impact_of_not_doing":"Lack of social support may worsen anxiety and stress levels.","frequency":"Bi-weekly","next_step_recommendation":"N/A","supporting_evidence":"No specific documentation of participation in support groups.","user_input_questions":["Have you attended any community support groups for stress management in the past month?","If yes, how many times did you attend those meetings?"]}]},{"category_name":"Weight Management","activities":[{"action_name":"Follow a weight loss program","status":"Needs user confirmation","importance":"High","rationale":"Managing dietary intake is crucial for weight loss.","impact_of_not_doing":"Risk of obesity-related complications and worsening prediabetes status.","frequency":"Daily adherence","next_step_recommendation":"N/A","supporting_evidence":"No confirmed record of program adherence.","user_input_questions":["Have you been actively following a detailed weight loss program in the last month?","Have you been tracking your dietary intake or weight regularly as part of this program?"]},{"action_name":"Engage in regular physical activity","status":"Needs user confirmation","importance":"High","rationale":"Regular exercise aids weight management and improves cardiovascular health.","impact_of_not_doing":"Increased risk of obesity and associated health issues.","frequency":"150 minutes per week (30 minutes, 5 times per week)","next_step_recommendation":"N/A","supporting_evidence":"No specific evidence of regular physical activity.","user_input_questions":["Have you engaged in physical activity at least 150 minutes per week over the past month?","Do you have a record of your physical activity sessions?"]}]},{"category_name":"Preventive Health Screenings","activities":[{"action_name":"Colorectal cancer screening","status":"Needs user confirmation","importance":"High","rationale":"Early detection improves treatment outcomes for colorectal cancer.","impact_of_not_doing":"Increased risk of undetected colorectal cancer.","frequency":"Every 10 years","next_step_recommendation":"N/A","supporting_evidence":"No specific information on screening completion.","user_input_questions":["Have you had a colorectal cancer screening in the last 10 years?","If yes, can you provide the date of that screening?"]},{"action_name":"Blood pressure and cholesterol screening","status":"Completed","importance":"High","rationale":"Monitoring can help manage cardiovascular risk factors.","impact_of_not_doing":"Possibility of undiagnosed hypertension or dyslipidemia leading to heart disease.","frequency":"At least once a year","next_step_recommendation":"Maintain regular follow-up screenings annually.","supporting_evidence":"Last screenings were completed on 2024-02-24 and 2025-03-01.","user_input_questions":null}]}],"assessment_date":"2025-05-17T00:40:14"}
+{
+    "categories": [
+        {
+            "category_name": "Preventive Screenings",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Monitor blood pressure at every healthcare visit, with a formal annual screening to detect early signs of hypertension.",
+                        "importance": "High",
+                        "recommendation_reason": "Obesity increases the risk of hypertension, and early detection is key for preventing cardiovascular complications.",
+                        "benefit": "Timely intervention can reduce the risk of stroke, heart disease, and kidney issues.",
+                        "impact_of_not_doing": "Undetected high blood pressure may lead to serious cardiovascular events and organ damage.",
+                        "frequency": "At every visit with a formal check at least once per year.",
+                        "source": "USPSTF and MedlinePlus Medical Encyclopedia",
+                        "recommendation_short_str": "BP Check",
+                        "frequency_short_str": "Each visit/Annually"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm whether blood pressure was monitored at each healthcare visit and if a formal annual screening occurred in the last year.",
+                    "supporting_evidence": "Patient data shows multiple healthcare encounters but lacks specific documentation of blood pressure checks at each visit or a formal annual screening within the prescribed timeframe.",
+                    "user_input_questions": [
+                        "Was your blood pressure monitored at each healthcare visit in the past year?",
+                        "Was there a formal annual blood pressure screening conducted in the last year?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo an annual cholesterol screening (lipid panel) to monitor for dyslipidemia.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient’s obesity and prediabetes heighten the risk for abnormal cholesterol levels.",
+                        "benefit": "Early detection supports timely interventions that reduce the risk of heart disease and stroke.",
+                        "impact_of_not_doing": "Undiagnosed dyslipidemia can contribute to cardiovascular complications.",
+                        "frequency": "Annually.",
+                        "source": "USPSTF, ADA, and MedlinePlus Medical Encyclopedia",
+                        "recommendation_short_str": "Cholesterol Test",
+                        "frequency_short_str": "Annually"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you have undergone the annual cholesterol screening (lipid panel) this year.",
+                    "supporting_evidence": "The last documented lipid panel was conducted on 2022-06-27, which shows cholesterol levels, but there is no record indicating that another screening occurred since then.",
+                    "user_input_questions": [
+                        "Have you undergone a cholesterol screening (lipid panel) in the last year?",
+                        "Have you received the results from your last cholesterol screening?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo annual diabetes screening using HbA1c or fasting glucose tests.",
+                        "importance": "High",
+                        "recommendation_reason": "The presence of prediabetes combined with obesity necessitates regular monitoring for type 2 diabetes.",
+                        "benefit": "Early diagnosis facilitates prompt lifestyle or medical interventions, preventing complications.",
+                        "impact_of_not_doing": "Delayed diagnosis can result in unchecked progression of diabetes and increased risk of complications.",
+                        "frequency": "Annually.",
+                        "source": "ADA Standards of Care and CDC Guidelines",
+                        "recommendation_short_str": "Diabetes Screen",
+                        "frequency_short_str": "Annually"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's latest Hemoglobin A1c level is 6.0%, which indicates diabetes screening has been performed and the patient is being monitored for prediabetes.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Complete an annual anemia screening with a complete blood count (CBC) and appropriate iron studies as needed.",
+                        "importance": "High",
+                        "recommendation_reason": "Documented anemia warrants regular monitoring to manage and prevent worsening symptoms.",
+                        "benefit": "Timely identification allows for early intervention to improve energy levels and overall quality of life.",
+                        "impact_of_not_doing": "Unmanaged anemia may lead to fatigue, reduced quality of life, and potential cardiovascular strain.",
+                        "frequency": "Annually; increase frequency if symptoms exacerbate.",
+                        "source": "CDC and USPSTF Anemia Guidelines",
+                        "recommendation_short_str": "Anemia Screen",
+                        "frequency_short_str": "Annually"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm if an annual anemia screening with CBC and iron studies was completed.",
+                    "supporting_evidence": null,
+                    "user_input_questions": [
+                        "Have you completed an annual anemia screening with a complete blood count (CBC) in the last year?",
+                        "Did you have iron studies done as part of your screening?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Chronic Disease Management",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Enroll in a structured weight management program that includes dietary guidance, physical activity, and regular monitoring by a healthcare provider.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient's BMI of 37.3 and prediabetes significantly increase the risk of further metabolic and cardiovascular complications.",
+                        "benefit": "A structured program facilitates weight loss, reduces the risk of type 2 diabetes, and improves overall cardiovascular health.",
+                        "impact_of_not_doing": "Persistent obesity may lead to worsening metabolic issues, increased diabetes risk, and a higher likelihood of heart disease.",
+                        "frequency": "Participate in counseling sessions every 1-3 months with self-monitoring on a monthly basis.",
+                        "source": "American Diabetes Association (ADA) and USPSTF Obesity Guidelines",
+                        "recommendation_short_str": "Weight Mgmt Program",
+                        "frequency_short_str": "Every 1-3 months"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you have enrolled in the structured weight management program and participated in any sessions.",
+                    "supporting_evidence": null,
+                    "user_input_questions": [
+                        "Have you enrolled in a structured weight management program?",
+                        "Have you participated in any counseling sessions for this program?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Mental Health and Social Support",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Engage in regular mental health evaluations and counseling to manage moderate anxiety and mild depression.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient's GAD-7 score of 11 and PHQ-9 score of 7 indicate a need for ongoing emotional and psychological support.",
+                        "benefit": "Consistent mental health care can improve emotional well-being, enhance coping skills, and prevent worsening of symptoms.",
+                        "impact_of_not_doing": "Neglecting mental health may result in exacerbated anxiety or depression, negatively impacting daily functioning and overall health.",
+                        "frequency": "At least annually, with additional sessions as symptoms dictate.",
+                        "source": "USPSTF and American Psychiatric Association Guidelines",
+                        "recommendation_short_str": "Mental Health Eval",
+                        "frequency_short_str": "Annually/as needed"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Verify the patient's engagement in any recent mental health evaluations or counseling sessions as recommended.",
+                    "supporting_evidence": "The patient's GAD-7 score is 11 and PHQ-9 score is 7, indicating moderate anxiety and mild depression; however, there are no records indicating recent evaluations or counseling sessions.",
+                    "user_input_questions": [
+                        "Have you engaged in mental health evaluations in the past year?",
+                        "Have you participated in counseling sessions within the last year?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Coordinate assistance with transportation to medical appointments and telehealth services to ensure consistent access to care.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient has reported transportation barriers that impede access to necessary healthcare services.",
+                        "benefit": "Improved transportation support will reduce missed appointments and enhance overall disease management.",
+                        "impact_of_not_doing": "Lack of transportation may lead to missed care opportunities, potentially worsening health outcomes.",
+                        "frequency": "Arrange support prior to each scheduled appointment.",
+                        "source": "CDC Social Determinants of Health Guidelines",
+                        "recommendation_short_str": "Arrange Transport/Telehealth",
+                        "frequency_short_str": "Per appointment"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you have arranged assistance with transportation for your medical appointments and telehealth services.",
+                    "supporting_evidence": "The patient's data indicates previous transportation barriers that have impacted access to medical appointments.",
+                    "user_input_questions": [
+                        "Have you arranged transportation to your medical appointments?",
+                        "Have you arranged transportation for any upcoming telehealth services?"
+                    ]
+                }
+            ]
+        }
+    ],
+    "assessment_date": "2025-05-17 14:23:03"
+}
