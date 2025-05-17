@@ -13,12 +13,12 @@ tracer_provider = register(
     api_key = "ak-b627c915-01f8-463c-a610-821896dd6eac-JkuxcP1mo4DcZwxTA8e7OKmSmVvKctSm", # in app space settings page
     project_name="agents"
 )
-
+tracer = tracer_provider.get_tracer(__name__)
 from openinference.instrumentation.openai_agents import OpenAIAgentsInstrumentor
 OpenAIAgentsInstrumentor().instrument(tracer_provider=tracer_provider)
 
 
-
+@tracer.agent(name="Health")
 async def main():
     # Initialize the healthcare agent
     healthcare_agent = HealthCareAgent()
