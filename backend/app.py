@@ -19,6 +19,17 @@ class ActivityImportance(str, Enum):
     MEDIUM = "Medium"
     LOW = "Low"
 
+class HealthActivityRecommendation(BaseModel):
+    recommendation: str = Field(..., description="The specific recommendation")
+    importance: ActivityImportance = Field(..., description="Importance level of the activity")
+    recommendation_reason: str = Field(..., description="What do you know about this patient's data that makes you belive this recommendation is relevant for this particulat patient.")
+    benefit: str = Field(..., description="why is this important for their health and what are the benfits.")
+    impact_of_not_doing: str = Field(..., description="what are the potential consequences of not doing this.")
+    frequency: str = Field(..., description="how often should the patient be doing this activity")
+
+class HealthActivityRecommendationList(BaseModel):
+    recommendations: List[HealthActivityRecommendation] = Field(..., description="List of health activity recommendations")
+
 class HealthActivity(BaseModel):
     action_name: str = Field(..., description="The name of the health activity")
     status: ActivityStatus = Field(..., description="Current status of the activity")
@@ -134,42 +145,78 @@ class HealthCareAgent:
 
         self.patient_data_basic_summary_agent = Agent(
             name="Health Care Patient Data Summarizer",
-            instructions=f"""Your goal is to summarize the patient's health data to just identify the patient's age, sex, and any other basic demographic information. This will be used to search the web for general health guidelines and recommendations for such kinds of patients.
+            instructions=f"""Provide a very biref summary of patient's health data in a sentence or two that includes the patient's age, sex, and any other basic demographic information. A different agent will use this to conduct a web search to identify general health guidelines and recommendations for such kinds of patients. Do not specific details about the patient's data outside of basic demographics, so the search focuses on the most basic general guidelines that generally apply to patients like this, without being influenced by the specific conditions or risk factors that may be unique to them.
             
             """,
-            model="gpt-4o-mini",
+            model="gpt-4o",
             tools=[get_patient_info],
         )
 
         self.patient_data_advanced_summary_agent = Agent(
             name="Health Care Patient Data Advanced Summarizer",
-            instructions=f"""Your goal is to summarize the patient's health data to identify pertinent information about the patient's health data which would influence the kind of health guidelines and recommendations that would be uniquely applicable to them based on their health data. This includes demographic information, health conditions, risk factors and more.
+            instructions=f"""Provide a short description of this patient's health data in a few senteces that includes basic demographics and any pertinent information about the patient's health data which would influence the kind of health guidelines and recommendations that would be uniquely applicable to them based on their health data.
+
+            A different agent will use this summary to conduct a web search to identify general health guidelines and recommendations for patients with the sepecific situations you outline. Do not make any recommendations of your own, just provide clear facts that are mentioned in the health record. Let the other agent make the assessment on recommendations based on their knowledge and internet searches.
             
             """,
-            model="gpt-4o-mini",
+            model="gpt-4o",
             tools=[get_patient_info],
         )
 
         self.activity_recommender_agent = Agent(
             name="Health Care Activity Recommender",
-            instructions=f"""You will be given high level information about a patietnt. Your goal is to generate a list of activities, by category, of things they should be doing. These activities could include but are not limited to health screenings, vaccinations, completing follow up activities that their provider recommended, following any dietary recommendations or exercise recommendations and more.
+            output_type=HealthActivityRecommendationList,
+            instructions=f"""You will be given high level information about a patietnt. Your goal is to research known health guidelines to generate a list of activities, by category, of things they should be doing. These activities could include but are not limited to health screenings, vaccinations, completing follow up activities that their provider recommended, following any dietary recommendations or exercise recommendations and more.
 
             You will use what you have been told about the patient and use internet search to identify what are the latest guidelines and recommendations for such patients.
             
             Your final output should be a list of recommended actions/tasks grouped by category. For each recommended action/task, specify:
-            1. Action/Task: the specific action/task.
+            1. Recommendation: The specific recommendation.
             2. Level of importance: how important is this to their health.
             3. Frequency: how frequently should be doing it. Do not be vague on the frequency, specify it in a measurable way so that a separate agent can review the detailed medical record to assess whether that activity was completed within that recent timeframe. If a certain activity is only as needed and left at the patient's discretion, then say that and do not try to impose a frequency on it. 
-            4. Rationale for doing this: why is this important for their health and what are the benfits.
-            5. Impact of not doing this: what are the consequences of not doing this.
+            4. Reason for recommendation: What do you know about this patient's data that makes you belive this recommendation is relevant for this particulat patient.
+            5. Benefit of following this recommendation: why is this important for their health and what are the benfits.
+            6. Impact of not doing this: what are the potential consequences of not doing this.
             6. Source: what is the source of the recommendation.
 
             Your inputs will be used by another agent to assess whether the patient has completed the activity/task within the prescribed timeframe.
 
             The current date and time is: {self.current_date_and_time}
             """,
-            model="gpt-4o-mini",
+            model="gpt-4.1",
             tools=[WebSearchTool()],
+        )
+
+        self.uspstf_guideline_recommender_agent = Agent(
+            name="USPSTF Guideline Recommender",
+            output_type=HealthActivityRecommendationList,
+            instructions=f"""You are an agent that specializes in analyzing USPSTF guidelines and matching them to patient data. Your goal is to:
+
+            1. Use the query_uspstf_guidelines tool to get relevant USPSTF recommendations based on the patient's characteristics
+            2. Review the patient's health data to determine which recommendations are truly applicable
+            3. Convert the applicable recommendations into a structured list of health activities
+
+            For each recommendation from USPSTF that you determine is applicable to the patient, you should:
+            1. Extract the specific recommendation and convert it into a clear, actionable activity
+            2. Set the importance level based on the USPSTF grade (A = High, B = Medium)
+            3. Extract or infer the frequency from the recommendation text
+            4. Explain why this recommendation is relevant for this specific patient based on their health data
+            5. Include the benefits and potential consequences from the USPSTF recommendation
+            6. Clearly indicate that the source is USPSTF
+
+            Your output should follow the HealthActivityRecommendationList format, with each recommendation containing:
+            - recommendation: The specific actionable recommendation
+            - importance: High/Medium based on USPSTF grade
+            - recommendation_reason: Why this applies to this specific patient
+            - benefit: The health benefits of following this recommendation
+            - impact_of_not_doing: The consequences of not following this recommendation
+            - frequency: How often this should be done
+
+            Only include recommendations that are truly applicable to the patient based on their health data.
+            The current date and time is: {self.current_date_and_time}
+            """,
+            model="gpt-4o",
+            tools=[get_patient_info, self.query_uspstf_guidelines],
         )
 
         self.activity_list_consolidator_agent = Agent(
@@ -222,9 +269,9 @@ class HealthCareAgent:
 
             You will first use the activity recommender agent to generate a list of recommended activities/tasks by category that the paretient should be doing based on their health data. This tool does not have access to any information about the patient, it only uses the information provided to it by you in plain language. You should use this tool to generate the list of recommended activities/tasks. You should plan to use this tool exactly twice. Once using only the patient's age, sex and basic demographics. Then a second time using the patient's age, sex, basic demographics and the specific conditions and risk factors. 
 
-            Next you will call the query_uspstf_guidelines tool to directly query the USPSTF guidelines database based on the patient's characteristics. YOu would need to pass the tool the patient's age, sex, sexually active, tobacco use and bmi. Note that the values for BMI are: "UW" for underweight , "N" for normal, "O" for overweight and "OB" for obese. If any of the arguments are not available in the patient's data, pass a null for those. The tool will return a list of potential recommendations that could be applicable to the patient, but might also not be. The text returned by the tool has more details about the specific conditions in which the recommendation is applicable. You will use your knowledge of the patient's health data to truly determine which of the recommendations are applicable to the patient and which are not.
-            
-            You would then use the activity_list_consolidator tool to consolidate all the lists of recommendations you got from the activity_recommender tool and the query_uspstf_guidelines tool, into a smaller focused list of recommended activities/tasks. You would need to pass it all the outputs you have received from all the different calls you made to the activity_recommender tool and the query_uspstf_guidelines tool.
+            Next you will use the uspstf_guideline_recommender agent to get recommendations directly from the USPSTF guidelines database. This agent will analyze the patient's data and match it against USPSTF guidelines to generate a list of applicable recommendations.
+
+            You would then use the activity_list_consolidator tool to consolidate all the lists of recommendations you got from the activity_recommender tool and the uspstf_guideline_recommender tool, into a smaller focused list of recommended activities/tasks. You would need to pass it all the outputs you have received from all the different calls you made to the activity_recommender tool and the uspstf_guideline_recommender tool.
 
             Once you have the focused consolidated list of recommened activities/tasks, you must then call the activity assessment agent for each activity/task.  This tool will perform a detailed assessment of whether the patient data indicates that the patient has completed the activity/task within the prescribed timeframe. It will then provide you with its findings, including what evidence the patient's health data may have to support the assessment.
              
@@ -259,7 +306,10 @@ class HealthCareAgent:
                     tool_name="activity_recommender",
                     tool_description="You can use this tool to generate a list of recommended activities/tasks by category that the paretient should be doing based on their health data. This tool does not have access to any information about the patient, it only uses the information you provide to it about the patient. It works best with plain language input mentioning the criteria for the person it should get recommendations for. It would them use its knowledge and internet searches to identify the latest recommendations of tasks/activities by category. The output would include the level of importance, frequency, rationale for doing this, and the impact of not doing this.",
                 ),
-                self.query_uspstf_guidelines,
+                self.uspstf_guideline_recommender_agent.as_tool(
+                    tool_name="uspstf_guideline_recommender",
+                    tool_description="This tool analyzes USPSTF guidelines and matches them to patient data to generate a list of applicable recommendations. It uses the patient's health data to determine which USPSTF recommendations are truly relevant and converts them into actionable activities with importance levels, frequencies, and rationales.",
+                ),
                 self.activity_assessment_agent.as_tool(
                     tool_name="activity_assessment",
                     tool_description="""This tool assess whether a patient has completed a health related task or activitiy within the prescribed timeframe. You should pass it the following inputs as key value pairs:
@@ -280,13 +330,36 @@ class HealthCareAgent:
     async def review_patient(self):
         """Run the patient review process."""
         print("Running patient data basic summary agent")
-        result = await Runner.run(self.patient_data_basic_summary_agent, "fetch patient data and generate summary.", max_turns=20)
-        print(result.final_output)
-        print("Running patient data advanced summary agent")
-        result = await Runner.run(self.patient_data_advanced_summary_agent, "fetch patient data and generate summary.", max_turns=20)
-        print(result.final_output)
+        result = await Runner.run(self.patient_data_basic_summary_agent, "fetch patient data and generate summary.", max_turns=5)
+        basic_summary = result.final_output
+        print(f"\n\nBasic summary: {basic_summary}\n\n")
 
+        print("Running patient data advanced summary agent")
+        result = await Runner.run(self.patient_data_advanced_summary_agent, "fetch patient data and generate summary.", max_turns=5)
+        advanced_summary = result.final_output  
+        print(f"\n\nAdvanced summary: {advanced_summary}\n\n")
+
+
+        print("Running health activity recommender agent using basic summary")
+        result = await Runner.run(self.activity_recommender_agent, basic_summary, max_turns=5)
+        basic_recommendations = result.final_output_as(HealthActivityRecommendationList)
+        print(f"\n\nFound {len(basic_recommendations.recommendations)} health activity recommendations using basic summary: {basic_recommendations.model_dump_json(indent=4)}\n\n")
+
+        print("Running health activity recommender agent using advanced summary")
+        result = await Runner.run(self.activity_recommender_agent, advanced_summary, max_turns=5)
+        advanced_recommendations = result.final_output_as(HealthActivityRecommendationList)
+        print(f"\n\nFound {len(advanced_recommendations.recommendations)} health activity recommendations using advanced summary: {advanced_recommendations.model_dump_json(indent=4)}\n\n")
+
+
+        print("Running health activity recommender agent using USPSTF  guidelines")
+        result = await Runner.run(self.uspstf_guideline_recommender_agent, "Generate a list of health activities/tasks that the patient should be doing based on their health data.", max_turns=5)
+        uspstf_recommendations = result.final_output_as(HealthActivityRecommendationList)
+        print(f"\n\nFound {len(uspstf_recommendations.recommendations)} health activity recommendations using USPSTF guidelines: {uspstf_recommendations.model_dump_json(indent=4)}\n\n")
+
+        combined_recommendations = basic_recommendations.recommendations + advanced_recommendations.recommendations + uspstf_recommendations.recommendations
+        print(f"\n\nTotally now have {len(combined_recommendations.recommendations)} health activity recommendations: {combined_recommendations.model_dump_json(indent=4)}\n\n")
         return
+    
         result = await Runner.run(self.orchestrator_agent, "Review the patients's data and produce the final output.", max_turns=20)
         
         # Parse the output into the HealthAssessmentOutput model
