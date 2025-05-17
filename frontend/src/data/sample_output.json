@@ -1,1 +1,238 @@
-{"categories":[{"category_name":"Stress Management","activities":[{"action_name":"Mindfulness meditation","status":"Needs user confirmation","importance":"High","rationale":"Helps reduce anxiety and improves overall emotional well-being.","impact_of_not_doing":"Increased stress levels potentially leading to further anxiety issues.","frequency":"10-15 minutes daily","next_step_recommendation":"N/A","supporting_evidence":"No documentation in health records about meditation participation.","user_input_questions":["Have you practiced mindfulness meditation in the past week?","If yes, how many times did you meditate in the past week?"]},{"action_name":"Therapy sessions for anxiety management","status":"Needs user confirmation","importance":"High","rationale":"Professional support provides coping strategies for anxiety.","impact_of_not_doing":"Persistence of anxiety symptoms impacting daily functioning.","frequency":"At least once a week","next_step_recommendation":"N/A","supporting_evidence":"No specific information about completed therapy sessions.","user_input_questions":["Have you attended therapy sessions for anxiety in the past month?","Are you currently scheduled for future therapy sessions?"]},{"action_name":"Participate in community support groups","status":"Needs user confirmation","importance":"Medium","rationale":"Sharing experiences can enhance coping strategies.","impact_of_not_doing":"Lack of social support may worsen anxiety and stress levels.","frequency":"Bi-weekly","next_step_recommendation":"N/A","supporting_evidence":"No specific documentation of participation in support groups.","user_input_questions":["Have you attended any community support groups for stress management in the past month?","If yes, how many times did you attend those meetings?"]}]},{"category_name":"Weight Management","activities":[{"action_name":"Follow a weight loss program","status":"Needs user confirmation","importance":"High","rationale":"Managing dietary intake is crucial for weight loss.","impact_of_not_doing":"Risk of obesity-related complications and worsening prediabetes status.","frequency":"Daily adherence","next_step_recommendation":"N/A","supporting_evidence":"No confirmed record of program adherence.","user_input_questions":["Have you been actively following a detailed weight loss program in the last month?","Have you been tracking your dietary intake or weight regularly as part of this program?"]},{"action_name":"Engage in regular physical activity","status":"Needs user confirmation","importance":"High","rationale":"Regular exercise aids weight management and improves cardiovascular health.","impact_of_not_doing":"Increased risk of obesity and associated health issues.","frequency":"150 minutes per week (30 minutes, 5 times per week)","next_step_recommendation":"N/A","supporting_evidence":"No specific evidence of regular physical activity.","user_input_questions":["Have you engaged in physical activity at least 150 minutes per week over the past month?","Do you have a record of your physical activity sessions?"]}]},{"category_name":"Preventive Health Screenings","activities":[{"action_name":"Colorectal cancer screening","status":"Needs user confirmation","importance":"High","rationale":"Early detection improves treatment outcomes for colorectal cancer.","impact_of_not_doing":"Increased risk of undetected colorectal cancer.","frequency":"Every 10 years","next_step_recommendation":"N/A","supporting_evidence":"No specific information on screening completion.","user_input_questions":["Have you had a colorectal cancer screening in the last 10 years?","If yes, can you provide the date of that screening?"]},{"action_name":"Blood pressure and cholesterol screening","status":"Completed","importance":"High","rationale":"Monitoring can help manage cardiovascular risk factors.","impact_of_not_doing":"Possibility of undiagnosed hypertension or dyslipidemia leading to heart disease.","frequency":"At least once a year","next_step_recommendation":"Maintain regular follow-up screenings annually.","supporting_evidence":"Last screenings were completed on 2024-02-24 and 2025-03-01.","user_input_questions":null}]}],"assessment_date":"2025-05-17T00:40:14"}
+{
+    "categories": [
+        {
+            "category_name": "Cardiovascular and Metabolic Health",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Monitor blood pressure with a structured schedule: if normal, check every 2 years; if elevated, monitor annually.",
+                        "importance": "High",
+                        "recommendation_reason": "At 44 years old with obesity and prediabetes, the patient is at increased risk for hypertension and cardiovascular complications.",
+                        "benefit": "Timely blood pressure monitoring enables early detection and management of hypertension, reducing risks of heart attack, stroke, and kidney damage.",
+                        "impact_of_not_doing": "Undetected or uncontrolled high blood pressure can lead to severe cardiovascular events and related complications.",
+                        "frequency": "Every 2 years if normal; annually if elevated.",
+                        "source": "USPSTF and Cedars-Sinai guidelines",
+                        "recommendation_short_str": "BP check.",
+                        "frequency_short_str": "2y/annually if high"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "On 2024-07-01, a blood pressure panel showed a systolic reading of 101 mm Hg and a diastolic reading of 72 mm Hg. Given that these values are within the normal range, the patient appears to have had the recommended blood pressure check within the appropriate timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Screen for lipid disorders by assessing cholesterol levels.",
+                        "importance": "High",
+                        "recommendation_reason": "Given the patient's age and obesity, evaluating lipid levels helps in assessing cardiovascular risk.",
+                        "benefit": "Early detection of abnormal cholesterol levels aids in reducing the risk of atherosclerosis, heart attack, and stroke.",
+                        "impact_of_not_doing": "Unmanaged lipid disorders can lead to plaque buildup and increase the likelihood of cardiovascular disease.",
+                        "frequency": "Every 5 years if baseline results are normal; more frequently if abnormalities are detected.",
+                        "source": "USPSTF and Cedars-Sinai guidelines",
+                        "recommendation_short_str": "Lipid screening.",
+                        "frequency_short_str": "Every 5 yrs if normal"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's lipid panel from 2022-06-27 shows a total cholesterol of 149.6 mg/dL, triglycerides of 139.1 mg/dL, LDL of 67.1 mg/dL, and HDL of 54.7 mg/dL, which indicates that a lipid screening has been performed within the recommended timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Screen for abnormal blood glucose levels.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient's obesity (BMI 37.3) places him at higher risk for type 2 diabetes.",
+                        "benefit": "Early detection of abnormal blood sugar can prompt timely interventions to prevent or delay the onset of diabetes.",
+                        "impact_of_not_doing": "Undiagnosed abnormal glucose levels can progress to type 2 diabetes with associated complications.",
+                        "frequency": "Every 3 years if blood glucose remains within normal limits.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "Glucose screening.",
+                        "frequency_short_str": "Every 3 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient’s lab results include a 2024-07-01 basic metabolic panel that shows a blood glucose level of 91.4 mg/dL, with previous results (83.2 mg/dL in 2022 and 78.8 mg/dL in 2020) also in the normal range. This indicates that the glucose screening has been performed within the recommended timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Refer to preventive interventions for prediabetes.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient has prediabetes, indicating early elevation in blood sugar that requires intervention.",
+                        "benefit": "Engaging in preventive interventions can delay or prevent progression to type 2 diabetes and reduce associated health risks.",
+                        "impact_of_not_doing": "Without intervention, prediabetes may progress to full-blown diabetes, increasing the risk for multiple complications.",
+                        "frequency": "As needed based on the patient’s readiness and clinical referral.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "Prediabetes intervention.",
+                        "frequency_short_str": "As needed"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient is noted to have a current Diabetes self management plan that includes a diabetic diet and exercise therapy (active since 2005). In addition, his recent lab value with a Hemoglobin A1c of 6.0% supports that he is managing his prediabetes. These data suggest that the preventive interventions recommended for prediabetes have been addressed.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Refer to intensive behavioral counseling for weight loss.",
+                        "importance": "High",
+                        "recommendation_reason": "A BMI of 37.3 classifies the patient as obese, significantly increasing cardiovascular and metabolic risks.",
+                        "benefit": "Targeted counseling can help achieve weight reduction, thereby lowering the risk of cardiovascular disease and improving overall metabolic health.",
+                        "impact_of_not_doing": "Failure to address obesity can perpetuate high cardiovascular risk and exacerbate metabolic disturbances.",
+                        "frequency": "Per clinical referral, based on the patient’s readiness.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "Weight loss counseling.",
+                        "frequency_short_str": "Per referral"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not yet attended, please schedule an appointment for intensive behavioral counseling for weight loss.",
+                    "supporting_evidence": "The patient's recent BMI is 37.3 kg/m2 which supports the recommendation for weight loss counseling; however, there is no recorded evidence of any behavioral counseling sessions for weight loss in the patient's health data.",
+                    "user_input_questions": [
+                        "Have you attended any intensive behavioral counseling sessions for weight loss recently?",
+                        "Have you discussed weight management strategies or counseling with your healthcare provider since your last BMI measurement?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Infectious Disease Screening & Immunizations",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Screen for HIV infection.",
+                        "importance": "High",
+                        "recommendation_reason": "At 44 years old and potentially sexually active, routine HIV screening is essential for early detection.",
+                        "benefit": "Early identification of HIV can facilitate timely treatment and help reduce transmission risks.",
+                        "impact_of_not_doing": "Undiagnosed HIV infection can progress to AIDS and lead to increased susceptibility to opportunistic infections.",
+                        "frequency": "At least once; repeat screening if the patient is at increased risk.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "HIV screening.",
+                        "frequency_short_str": "Once; repeat if at risk"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient whether they have undergone an HIV screening test within the recommended timeframe.",
+                    "supporting_evidence": "The patient record does not include any documented HIV screening test, such as lab results or procedures indicating an HIV test, making it unclear if the screening has been completed.",
+                    "user_input_questions": [
+                        "Have you had an HIV screening test in the past year?",
+                        "Did your healthcare provider recommend and complete an HIV test recently?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Screen for hepatitis C virus (HCV) infection.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient falls within the recommended age range (18-79 years) for routine HCV screening.",
+                        "benefit": "Early detection and treatment of HCV can prevent chronic liver disease, cirrhosis, and liver cancer.",
+                        "impact_of_not_doing": "Missed HCV infection may develop into advanced liver disease with serious health outcomes.",
+                        "frequency": "At least once; more frequently if the patient is at increased risk.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "HCV screening.",
+                        "frequency_short_str": "At least once"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "The patient should schedule a hepatitis C screening test if not already done.",
+                    "supporting_evidence": "There is no record of any hepatitis C screening procedure or related laboratory test in the patient data.",
+                    "user_input_questions": [
+                        "Have you been tested for hepatitis C within the past year?",
+                        "Do you recall having any blood tests specifically screening for hepatitis C?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Receive a tetanus-diphtheria (Td) booster.",
+                        "importance": "High",
+                        "recommendation_reason": "Maintaining up-to-date immunization protects against tetanus and diphtheria.",
+                        "benefit": "Provides ongoing immunity against potentially serious bacterial infections.",
+                        "impact_of_not_doing": "Lapse in vaccination increases vulnerability to tetanus and diphtheria.",
+                        "frequency": "Every 10 years.",
+                        "source": "MedlinePlus Medical Encyclopedia",
+                        "recommendation_short_str": "Td booster.",
+                        "frequency_short_str": "Every 10 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The immunization record on 2022-06-27 shows administration of a Td (adult) booster, which satisfies the recommendation of receiving a tetanus-diphtheria booster within the 10-year interval.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Get an annual influenza vaccine.",
+                        "importance": "High",
+                        "recommendation_reason": "Annual immunization helps protect against seasonal flu strains, especially in at-risk populations.",
+                        "benefit": "Reduces the risk of flu-related complications and helps protect overall public health.",
+                        "impact_of_not_doing": "Skipping the flu shot increases the risk of contracting influenza and its complications.",
+                        "frequency": "Every year during the flu season.",
+                        "source": "MedlinePlus Medical Encyclopedia",
+                        "recommendation_short_str": "Flu vaccine.",
+                        "frequency_short_str": "Yearly"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm whether you have received an influenza vaccine for the current flu season. If not, schedule an appointment to receive your annual flu shot.",
+                    "supporting_evidence": "The patient's immunization history shows receipt of a seasonal influenza vaccine on 2024-07-01 along with previous administrations in 2020, 2022, and 2017. However, there is no record for an influenza vaccine in 2025, which makes it unclear if the patient has been vaccinated for the current season.",
+                    "user_input_questions": [
+                        "Have you received an influenza vaccine for the current flu season (2025)?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Mental and Dental Health",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Screen for depression using a standardized tool.",
+                        "importance": "High",
+                        "recommendation_reason": "A PHQ-9 score of 7 indicates mild depression and calls for regular monitoring.",
+                        "benefit": "Timely detection can lead to early intervention, improving mood and overall quality of life.",
+                        "impact_of_not_doing": "Unaddressed depression may worsen over time and negatively affect daily functioning.",
+                        "frequency": "Annually or more frequently if symptoms worsen.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "Depression screening.",
+                        "frequency_short_str": "Annually/as needed"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "On 2024-07-01 there are multiple records indicating depression screening procedures were performed, including the use of the PHQ-9 and PHQ-2 assessments, which align with the recommended standardized tool for depression screening.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Screen for anxiety using a standardized assessment.",
+                        "importance": "High",
+                        "recommendation_reason": "A GAD-7 score of 11 suggests moderate anxiety that warrants routine evaluation.",
+                        "benefit": "Identifying anxiety early can lead to effective management, reducing its impact on daily life.",
+                        "impact_of_not_doing": "Persistent anxiety can impair functioning and potentially escalate if left untreated.",
+                        "frequency": "Annually or as needed based on symptom severity.",
+                        "source": "USPSTF recommendations",
+                        "recommendation_short_str": "Anxiety screening.",
+                        "frequency_short_str": "Annually/as needed"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "On 2024-07-01 the patient underwent an 'Assessment of anxiety' procedure and a standardized screening was performed using the GAD-7, which produced a score of 11.0. This score aligns with the criteria for moderate anxiety and indicates that the anxiety screening recommendation has been fulfilled.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Schedule regular dental examinations and cleanings.",
+                        "importance": "High",
+                        "recommendation_reason": "A history of gingivitis and dental caries highlights the need for regular dental care.",
+                        "benefit": "Routine dental visits help prevent progression of oral diseases and maintain dental health.",
+                        "impact_of_not_doing": "Neglecting dental care can lead to worsening oral health, tooth decay, and potential tooth loss.",
+                        "frequency": "Every 6 months or as recommended by a dentist.",
+                        "source": "American Dental Association guidelines",
+                        "recommendation_short_str": "Dental check-up.",
+                        "frequency_short_str": "Every 6 mos"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Since the recommended interval is every 6 months, and the most recent dental care procedures documented are from 2022, the patient should schedule a dental examination and cleaning if they have not had one recently.",
+                    "supporting_evidence": "The patient's record shows multiple dental procedures related to dental care (including oral health education, examinations, and dental cleanings) documented in 2020 and 2022. However, no dental check-up or cleaning is recorded within the last 6 months prior to the current date (2025-05-17), which raises concern about current adherence to the recommended schedule.",
+                    "user_input_questions": [
+                        "Have you had a dental examination or cleaning in the past 6 months?",
+                        "Have you scheduled an upcoming dental appointment since your last recorded dental care in 2022?"
+                    ]
+                }
+            ]
+        }
+    ],
+    "assessment_date": "2025-05-17 15:14:54"
+}
