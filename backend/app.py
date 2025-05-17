@@ -10,8 +10,7 @@ from enum import Enum
 
 class ActivityStatus(str, Enum):
     COMPLETED = "Completed"
-    NEVER_DONE = "Never done"
-    OVERDUE = "Overdue"
+    PARTIALLY_COMPLETED = "Partially completed"
     NEEDS_USER_CONFIRMATION = "Needs user confirmation"
 
 class ActivityImportance(str, Enum):
@@ -251,7 +250,7 @@ class HealthCareAgent:
 
             Discard any recommendations that are not applicable to the patient. 
 
-            Your final output should be a smaller consolidated and a much more focused list of recommended actions/tasks grouped by category. For each recommended action/task, specify:
+            Your final output should be a smaller consolidated and a much more focused list of recommended actions/tasks grouped by category. The category name should not exceed 28 characters. For each recommended action/task, specify:
             1. Recommendation: The specific recommendation.
             2. Level of importance: how important is this to their health.
             3. Frequency: how frequently should be doing it. Do not be vague on the frequency, specify it in a measurable way so that a separate agent can review the detailed medical record to assess whether that activity was completed within that recent timeframe. If a certain activity is only as needed and left at the patient's discretion, then say that and do not try to impose a frequency on it. 
@@ -262,10 +261,10 @@ class HealthCareAgent:
 
             In addition, because the recommendation and its frequency will be displayed on a mobile device, you should also provide a short version of the recommendation and frequency. We will display the short version of the recommendation as a title and the short version of the frequency as a subtitle. Do not duplicate information between the two.
 
-            8. Recommendation short summary: A short version of the recommendation string to display to the user on a mobile device (line 1).
-            9. Frequency short summary: A very short version of the frequency string to display to the user on a mobile device (line 2).
+            8. Recommendation short summary: A short version of the recommendation string to display to the user on a mobile device (line 1). Not to exceed 35 characters.
+            9. Frequency short summary: A very short version of the frequency string to display to the user on a mobile device (line 2).  Not to exceed 35 characters.
 
-            Ensure there are no more than 3 categories and no more than 5 activities per category. Fewer are okay. So pick the most relevant ones.
+            Ensure there are no more than 4 categories and no more than 5 activities per category. Fewer are okay. So pick the most relevant ones.
             """,
             model="o3-mini",
             tools=[self.get_patient_info],
@@ -277,7 +276,7 @@ class HealthCareAgent:
             instructions=f"""Your goal is to assess whether a patient's health data indicates that they have completed the health related task or activitiy within the prescribed timeframe.
 
             As an input to you, you will be given details of a single recommendation made by an AI agent for this patient. 
-            You will also be given the patient's health data.
+            You will also be given the patient's health data. Here's a hint, sometimes the encounter data does not have details of what was done in that encounter. A hint is to look at observations done around the same time. That might give you more information of what was done.
 
             You will then access the patient's health data to assess whether:
             a) The health data you have includes information which may help you assess whether they have fully or partially done this activity or followed that recommendation within the prescribed timeframe.
@@ -410,11 +409,11 @@ class HealthCareAgent:
 
         # Process each recommendation through the activity assessment agent
         final_categories = []
+        # Get patient data
+        patient_data = self._get_patient_info()
         for category in consolidated_recommendations.categories:
             assessed_activities = []
             for recommendation in category.recommendations:
-                # Get patient data
-                patient_data = self._get_patient_info()
                 
                 # Create input combining recommendation and patient data
                 assessment_input = {
