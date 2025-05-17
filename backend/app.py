@@ -243,14 +243,15 @@ class HealthCareAgent:
             output_type=HealthActivityRecommendationList,
             instructions=f"""You are an agent that will review different health activity recommendations made by other agents for a given patient, and review them agaisnt the patient's health data and your own knowledge and common sense. 
             
-            You will be given a list of health activity recommendations made by other agents for a given patient in JSON format. Since different agents may have made recommendations for the same activity or similar acttivities in different ways, you will need to consolidate them into a single list of activities/tasks by category.
+            You will be given a list of health activity recommendations made by other agents for a given patient in JSON format. Since different agents may have made recommendations for the same activity or similar acttivities in different ways, you will need to consolidate them into a single list of activities/tasks by category. 
 
-            Each activity should be unique and not redundant. Each activity should be specific, actionable and achievableby the patient and have a meaningful impact on their health. Do not include activities that are vague and hard to assess for completion. Also do not try and combine too many activities or recommendations into a single activity. Doing so makes it very hard to assess it for completion. Break them down into individual activity recommendations, or group together things that are typically always done together, so we can mark that group as completed.
+            Each activity should be unique and not redundant. Each activity should be specific, actionable and achievableby the patient and have a meaningful impact on their health. Do not include activities that are vague and hard to assess for completion. Also do not try and combine too many activities or recommendations into a single activity. Doing so makes it very hard to assess it for completion. Break them down into individual activity recommendations, or group together things that are typically always done together, so we can mark that group as completed. Feel free to re-think the categories and organize the unique activities into the most relevant categories. At a minimum, we should have a one category for Health screenings. We could have one cateogry for vaccinations if any vaccination related activities were recommended and deemed relevant. For the remaining activities, feel free to group them using the most appropriate category names. 
             
+            The category name should not exceed 28 characters. Ensure there are no more than 4 categories and no more than 5 activities per category. Fewer are okay. So pick the most relevant ones.
 
             Discard any recommendations that are not applicable to the patient. 
 
-            Your final output should be a smaller consolidated and a much more focused list of recommended actions/tasks grouped by category. The category name should not exceed 28 characters. For each recommended action/task, specify:
+            Your final output should be a smaller consolidated and a much more focused list of recommended actions/tasks grouped by category. For each recommended action/task, specify:
             1. Recommendation: The specific recommendation.
             2. Level of importance: how important is this to their health.
             3. Frequency: how frequently should be doing it. Do not be vague on the frequency, specify it in a measurable way so that a separate agent can review the detailed medical record to assess whether that activity was completed within that recent timeframe. If a certain activity is only as needed and left at the patient's discretion, then say that and do not try to impose a frequency on it. 
@@ -264,7 +265,6 @@ class HealthCareAgent:
             8. Recommendation short summary: A short version of the recommendation string to display to the user on a mobile device (line 1). Not to exceed 35 characters.
             9. Frequency short summary: A very short version of the frequency string to display to the user on a mobile device (line 2).  Not to exceed 35 characters.
 
-            Ensure there are no more than 4 categories and no more than 5 activities per category. Fewer are okay. So pick the most relevant ones.
             """,
             model="o3-mini",
             tools=[self.get_patient_info],
@@ -453,6 +453,9 @@ class HealthCareAgent:
         )
         #print json of final output
         print(f"\n\nFinal output: {final_output.model_dump_json(indent=4)}\n\n")
+        #write the final output to a file
+        with open("final_output.json", "w") as f:
+            f.write(final_output.model_dump_json(indent=4))
 
         return {
             "final_output": final_output.model_dump_json(indent=4),
