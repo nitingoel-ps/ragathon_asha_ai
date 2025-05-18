@@ -11,17 +11,12 @@ import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import type { ActivityItem } from "../../../types/HealthRecommendations";
-
-// Define the shape of your answers
-interface AnswerData {
-    [questionIndex: number]: 'yes' | 'no';
-}
+import type { ActivityItem, AnswerData } from "../../../types/HealthRecommendations";
 
 export default function ActivityQuestionDialog({
     activityData,
     handleCloseDialog,
-    dialogOpen
+    dialogOpen,
 }: {
     activityData: ActivityItem,
     handleCloseDialog: (answers?: AnswerData) => void,
@@ -41,11 +36,9 @@ export default function ActivityQuestionDialog({
                 <h2>{activityData.activity.recommendation}</h2>
             </DialogTitle>
             <DialogContent>
-                {activityData.status === 'Not started' || activityData.status === 'Needs user confirmation' || activityData.status === 'Partially completed' &&
+                {(activityData.status === 'Not started' || activityData.status === 'Needs user confirmation' || activityData.status === 'Partially completed') &&
                     (
-
                         <ActivityQuestionList activityData={activityData} handleCloseDialog={handleCloseDialog} />
-
                     )
                 }
 
