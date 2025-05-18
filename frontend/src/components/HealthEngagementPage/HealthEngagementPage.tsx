@@ -1,11 +1,7 @@
-//External Dependencies
+/* External Dependencies */
 import { useEffect, useState } from 'react';
-// MUI Components
-import CircularProgress from '@mui/material/CircularProgress';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 
-// Internal Dependencies
+/* Internal Dependencies */
 // Services
 import { fetchHealthData } from '../../services/fetchHealthData';
 // Utilities
@@ -18,6 +14,7 @@ import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
 // Components
 import Header from '../Header';
 import Footer from '../Footer';
+import ScoreDial from '../ScoreDial/ScoreDial';
 
 
 function HealthEngagementPage() {
@@ -63,50 +60,6 @@ function HealthEngagementPage() {
         </StyledHealthEngagementPage>
     );
 }
-
-function ScoreDial({ score }: { score: number }) {
-    return (
-        <div className="scoreDial">
-            <CircularProgressWithLabel value={score} />
-        </div>
-    )
-}
-
-function CircularProgressWithLabel({ value }: { value: number }) {
-    return (
-        <Box className="circularProgressWithLabel" sx={{ position: 'relative', display: 'inline-flex' }}>
-            <CircularProgress
-                className='progressBackground'
-                variant="determinate"
-                value={100}
-                sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0
-                }}
-            />
-            <CircularProgress className='progressForeground' variant="determinate" value={value} />
-            <Box
-                sx={{
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                    position: 'absolute',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-
-                }}
-            >
-                <Typography className="progressText"
-                    component="div"
-                >{`${Math.round(value)}`}</Typography>
-            </Box>
-        </Box >
-    );
-}
-
 function CategoryListItem({ categoryData }: { categoryData: Category }) {
     return (
         <div className="categoryListItem">
@@ -123,6 +76,7 @@ function CategoryListItem({ categoryData }: { categoryData: Category }) {
         </div>
     )
 }
+
 
 function ActivityListItem({ activityItem }: { activityItem: ActivityItem }) {
     return (
