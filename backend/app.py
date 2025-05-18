@@ -2,7 +2,8 @@ import os
 import nest_asyncio
 import json
 from typing import Optional, List, Dict, Any
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
+from fastapi.middleware.cors import CORSMiddleware
 from agents import Runner, function_tool, WebSearchTool, Agent
 from datetime import datetime
 from pydantic import BaseModel, Field
@@ -260,10 +261,10 @@ class HealthCareAgent:
             6. Impact of not doing this: what are the potential consequences of not doing this.
             7. Source: what is the source of the recommendation.
 
-            In addition, because the recommendation and its frequency will be displayed on a mobile device, you should also provide a short version of the recommendation and frequency. We will display the short version of the recommendation as a title and the short version of the frequency as a subtitle. Do not duplicate information between the two.
+            In addition, because the recommendation and its frequency will be displayed on a mobile device, you should also provide a short version of the recommendation and frequency. We will display the short version of the recommendation as a title and the short version of the frequency as a subtitle. Do not duplicate information between the two, specifically the recommendation short string should not also have any information about the frequency at which it should be done because in the UI it will show duplicated in the frequency short string.
 
-            8. Recommendation short summary: A short version of the recommendation string to display to the user on a mobile device (line 1). Not to exceed 35 characters.
-            9. Frequency short summary: A very short version of the frequency string to display to the user on a mobile device (line 2).  Not to exceed 35 characters.
+            8. Recommendation short string: A short version of the recommendation string to display to the user on a mobile device (line 1). Not to exceed 35 characters. Do not include any information about the frequency here.
+            9. Frequency short string: A very short version of the frequency string to display to the user on a mobile device (line 2).  Not to exceed 35 characters.
 
             """,
             model="o3-mini",
@@ -366,46 +367,42 @@ class HealthCareAgent:
         print("Running patient data basic summary agent")
         result = await Runner.run(self.patient_data_basic_summary_agent, "fetch patient data and generate summary.", max_turns=5)
         basic_summary = result.final_output
-        print(f"\n\nBasic summary: {basic_summary}\n\n")
 
         print("Running patient data advanced summary agent")
         result = await Runner.run(self.patient_data_advanced_summary_agent, "fetch patient data and generate summary.", max_turns=5)
         advanced_summary = result.final_output  
-        print(f"\n\nAdvanced summary: {advanced_summary}\n\n")
 
 
-        print("Running health activity recommender agent using basic summary")
+        print(f"Running health activity recommender agent using: {basic_summary}")
         result = await Runner.run(self.activity_recommender_agent, basic_summary, max_turns=5)
         basic_recommendations = result.final_output_as(HealthActivityRecommendationList)
         total_recommendations = sum(len(category.recommendations) for category in basic_recommendations.categories)
-        print(f"\n\nFound {len(basic_recommendations.categories)} categories with {total_recommendations} total health activity recommendations using basic summary: {basic_recommendations.model_dump_json(indent=4)}\n\n")
+        print(f"\n\nFound {len(basic_recommendations.categories)} categories with {total_recommendations} recommendations using basic summary\n\n")
 
-        print("Running health activity recommender agent using advanced summary")
+        print(f"Running health activity recommender agent using summary: {advanced_summary}")
         result = await Runner.run(self.activity_recommender_agent, advanced_summary, max_turns=5)
         advanced_recommendations = result.final_output_as(HealthActivityRecommendationList)
         total_recommendations = sum(len(category.recommendations) for category in advanced_recommendations.categories)
-        print(f"\n\nFound {len(advanced_recommendations.categories)} categories with {total_recommendations} total health activity recommendations using advanced summary: {advanced_recommendations.model_dump_json(indent=4)}\n\n")
+        print(f"\n\nFound {len(advanced_recommendations.categories)} categories with {total_recommendations} recommendations using advanced summary\n\n")
 
 
         print("Running health activity recommender agent using USPSTF  guidelines")
         result = await Runner.run(self.uspstf_guideline_recommender_agent, "Generate a list of health activities/tasks that the patient should be doing based on their health data.", max_turns=5)
         uspstf_recommendations = result.final_output_as(HealthActivityRecommendationList)
         total_recommendations = sum(len(category.recommendations) for category in uspstf_recommendations.categories)
-        print(f"\n\nFound {len(uspstf_recommendations.categories)} categories with {total_recommendations} total health activity recommendations using USPSTF guidelines: {uspstf_recommendations.model_dump_json(indent=4)}\n\n")
+        print(f"\n\nFound {len(uspstf_recommendations.categories)} categories with {total_recommendations} recommendations using USPSTF guidelines\n\n")
 
         # Combine all categories into a new HealthActivityRecommendationList
         combined_recommendations = HealthActivityRecommendationList(
             categories=basic_recommendations.categories + advanced_recommendations.categories + uspstf_recommendations.categories
         )
-        total_recommendations = sum(len(category.recommendations) for category in combined_recommendations.categories)
-        print(f"\n\nTotally now have {len(combined_recommendations.categories)} categories with {total_recommendations} total health activity recommendations: {combined_recommendations.model_dump_json(indent=4)}\n\n")
-    
+        total_recommendations = sum(len(category.recommendations) for category in combined_recommendations.categories)    
     
         #share all the combined recommendations to the activity_list_consolidator_agent agent to consolidate them into a smaller list
         result = await Runner.run(self.activity_list_consolidator_agent, combined_recommendations.model_dump_json(indent=4), max_turns=5)
         consolidated_recommendations = result.final_output_as(HealthActivityRecommendationList)
         total_recommendations = sum(len(category.recommendations) for category in consolidated_recommendations.categories)
-        print(f"\n\nConsolidated recommendations down to a smaller list of {len(consolidated_recommendations.categories)} categories with {total_recommendations} total health activity recommendations: {consolidated_recommendations.model_dump_json(indent=4)}\n\n")
+        print(f"\n\nConsolidated recommendations down to a smaller list of {len(consolidated_recommendations.categories)} categories with {total_recommendations} recommendations\n\n")
 
         # Process each recommendation through the activity assessment agent
         final_categories = []
@@ -453,10 +450,11 @@ class HealthCareAgent:
         )
         #print json of final output
         print(f"\n\nFinal output: {final_output.model_dump_json(indent=4)}\n\n")
+
         #write the final output to a file
         with open("final_output.json", "w") as f:
             f.write(final_output.model_dump_json(indent=4))
-
+                
         return {
             "final_output": final_output.model_dump_json(indent=4),
             "message_history": result.to_input_list()
@@ -464,6 +462,16 @@ class HealthCareAgent:
 
 # Initialize FastAPI app
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 healthcare_agent = None
 
 @app.on_event("startup")
@@ -495,3 +503,39 @@ async def review_patient():
 def get_final_output():
     with open("final_output.json", "r") as f:
         return json.load(f)
+
+@app.get("/get-recommendations-summary", response_class=Response)
+def get_recommendations_summary():
+    """Endpoint to get a plain text summary of recommendations."""
+    try:
+        with open("final_output.json", "r") as f:
+            data = json.load(f)
+        
+        summary = []
+        summary.append("Health Recommendations Summary\n")
+        summary.append("=" * 50 + "\n")
+        
+        for category in data["categories"]:
+            summary.append(f"\n{category['category_name']}")
+            summary.append("-" * len(category['category_name']))
+            
+            for activity in category["activities"]:
+                recommendation = activity["activity"]["recommendation_short_str"]
+                frequency = activity["activity"]["frequency_short_str"]
+                status = activity["status"]
+                
+                summary.append(f"\n• {recommendation}")
+                summary.append(f"  Frequency: {frequency}")
+                summary.append(f"  Status: {status}")
+                
+                # Add questions if they exist and status needs confirmation
+                if status == "Needs user confirmation" and activity.get("user_input_questions"):
+                    summary.append("  Questions to confirm:")
+                    for question in activity["user_input_questions"]:
+                        summary.append(f"    - {question}")
+            
+            summary.append("\n")
+        
+        return Response(content="\n".join(summary), media_type="text/plain")
+    except Exception as e:
+        return Response(content=f"Error generating summary: {str(e)}", status_code=500, media_type="text/plain")

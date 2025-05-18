@@ -1,272 +1,250 @@
 {
     "categories": [
         {
-            "category_name": "Health Screenings",
+            "category_name": "Preventive Screenings",
             "activities": [
                 {
                     "activity": {
-                        "recommendation": "Undergo a comprehensive physical examination annually.",
+                        "recommendation": "Have a blood pressure screening performed.",
                         "importance": "High",
-                        "recommendation_reason": "A complete exam is essential to assess overall health and detect early signs of disease.",
-                        "benefit": "Helps in early diagnosis and intervention for potential health issues.",
-                        "impact_of_not_doing": "Delayed recognition of emerging health concerns may lead to advanced disease.",
-                        "frequency": "Annually",
-                        "source": "MedlinePlus Medical Encyclopedia",
-                        "recommendation_short_str": "Annual physical exam",
-                        "frequency_short_str": "Annually"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have had a comprehensive physical exam in the past 12 months. If not, schedule an appointment for an annual physical exam.",
-                    "supporting_evidence": "The patient's records show multiple encounters and various screenings (including mental health, dental, and periodic laboratory assessments) but do not include clear documentation of a comprehensive physical exam. There is no explicit encounter labeled as an annual physical examination.",
-                    "user_input_questions": [
-                        "Have you had a comprehensive physical exam in the past 12 months?",
-                        "Was any part of a full-body physical examination performed during any of your recent visits?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Undergo an annual cardiovascular risk assessment including blood pressure measurement and lipid profile testing.",
-                        "importance": "High",
-                        "recommendation_reason": "The patient's obesity and prediabetes increase cardiovascular risks.",
-                        "benefit": "Early detection of hypertension and dyslipidemia can guide timely interventions.",
-                        "impact_of_not_doing": "Unmonitored cardiovascular risk factors can lead to heart disease and stroke.",
-                        "frequency": "Annually",
-                        "source": "MedlinePlus & BETTER LIFE guidelines",
-                        "recommendation_short_str": "Cardio screening annually",
-                        "frequency_short_str": "Annually"
-                    },
-                    "status": "Partially completed",
-                    "next_step_recommendation": "Schedule an updated lipid profile test to complete the annual cardiovascular risk assessment.",
-                    "supporting_evidence": "Blood pressure measurements were recorded on 2024-07-01, indicating that part of the recommendation was met. However, the most recent lipid panel is from 2022-06-27, which is outdated for an annual screening.",
-                    "user_input_questions": [
-                        "Have you had a lipid profile test performed in the past 12 months?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Undergo an annual diabetes risk assessment including blood glucose testing.",
-                        "importance": "High",
-                        "recommendation_reason": "The patient has prediabetes and obesity, which increase the risk for type 2 diabetes.",
-                        "benefit": "Regular monitoring helps prevent the progression to type 2 diabetes and its complications.",
-                        "impact_of_not_doing": "Delayed detection may result in the development of diabetes and related complications.",
-                        "frequency": "Annually",
-                        "source": "BETTER LIFE guidelines",
-                        "recommendation_short_str": "Diabetes test annually",
-                        "frequency_short_str": "Annually"
+                        "recommendation_reason": "Obesity increases the risk of hypertension in this patient.",
+                        "benefit": "Early detection helps prevent cardiovascular complications such as heart disease and stroke.",
+                        "impact_of_not_doing": "Undetected high blood pressure can lead to serious cardiovascular events.",
+                        "frequency": "Once every 12 months, or as advised if readings are elevated.",
+                        "source": "USPSTF, CDC Guidelines",
+                        "recommendation_short_str": "Check blood pressure.",
+                        "frequency_short_str": "Yearly"
                     },
                     "status": "Completed",
                     "next_step_recommendation": null,
-                    "supporting_evidence": "The patient's lab results from 2024-07-01 include a basic metabolic panel with a blood glucose measurement of 91.4 mg/dL and a Hemoglobin A1c of 6.0%, indicating that blood glucose testing was performed within the past year as part of an annual diabetes risk assessment.",
+                    "supporting_evidence": "The patient's record shows a blood pressure panel on 2024-07-01 with systolic (101 mm Hg) and diastolic (72 mm Hg) readings, which confirms that a blood pressure screening was performed within the recommended 12-month timeframe.",
                     "user_input_questions": null
                 },
                 {
                     "activity": {
-                        "recommendation": "Undergo annual mental health screening using standardized instruments (PHQ-9 and GAD-7) for depression and anxiety.",
+                        "recommendation": "Screen for dyslipidemia with a cholesterol panel.",
                         "importance": "High",
-                        "recommendation_reason": "The patient has a history of mild depression and moderate anxiety.",
-                        "benefit": "Identifies changes in mental health early, allowing timely management and support.",
-                        "impact_of_not_doing": "Unaddressed mental health issues can worsen and negatively impact overall well-being.",
-                        "frequency": "Annually",
-                        "source": "BETTER LIFE guidelines",
-                        "recommendation_short_str": "Mental health screening",
-                        "frequency_short_str": "Annually"
+                        "recommendation_reason": "Obesity is associated with an increased risk of lipid disorders which contribute to heart disease.",
+                        "benefit": "Enables early management to reduce the risk of cardiovascular events.",
+                        "impact_of_not_doing": "Unmanaged dyslipidemia can lead to heart attacks and strokes.",
+                        "frequency": "Once every 5 years on average, adjusting based on prior results.",
+                        "source": "AHA/ACC Guidelines, USPSTF",
+                        "recommendation_short_str": "Check cholesterol.",
+                        "frequency_short_str": "Every 5 yrs"
                     },
                     "status": "Completed",
                     "next_step_recommendation": null,
-                    "supporting_evidence": "The patient has clear evidence of mental health screening on 2024-07-01, which includes procedures labeled 'Depression screening using Patient Health Questionnaire Nine Item score,' 'Depression screening,' and 'Assessment of anxiety.' Additionally, the reports from that date show recorded scores (PHQ-9 score of 7.0 and GAD-7 score of 11.0) that support the completion of an annual mental health screening.",
+                    "supporting_evidence": "The patient data includes a lipid panel performed on 2022-06-27 that reports cholesterol (149.6 mg/dL), triglycerides (139.1 mg/dL), LDL (67.1 mg/dL), and HDL (54.7 mg/dL). This indicates that the cholesterol screening was completed within the recommended five-year interval.",
                     "user_input_questions": null
                 },
                 {
                     "activity": {
-                        "recommendation": "Undergo one-time HIV and hepatitis C screening if not previously performed.",
+                        "recommendation": "Discuss colorectal cancer screening options with your provider.",
                         "importance": "High",
-                        "recommendation_reason": "Routine infectious disease screening is recommended for all adults to ensure early detection.",
-                        "benefit": "Early diagnosis allows for timely treatment and reduces transmission risks.",
-                        "impact_of_not_doing": "Missed opportunity for early intervention can lead to undiagnosed infection and complications.",
-                        "frequency": "Once",
-                        "source": "MedlinePlus Medical Encyclopedia",
-                        "recommendation_short_str": "HIV/Hep C screening once",
-                        "frequency_short_str": "Once"
+                        "recommendation_reason": "At age 44, planning for colorectal cancer screening, which typically starts at age 45, is appropriate.",
+                        "benefit": "Early screening can detect precancerous changes, aiding in prevention or early treatment.",
+                        "impact_of_not_doing": "Delayed screening may result in late-stage cancer diagnosis.",
+                        "frequency": "Initiate discussion within the next year; screening periodicity as per test (e.g., colonoscopy every 10 years).",
+                        "source": "USPSTF, ACS Recommendations",
+                        "recommendation_short_str": "Plan colorectal screening.",
+                        "frequency_short_str": "Start at 45"
                     },
                     "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have ever undergone HIV and hepatitis C screening. Consider recommending screening if they have not.",
-                    "supporting_evidence": "The patient's health data does not include any records or laboratory results indicating that an HIV or hepatitis C screening has been performed.",
+                    "next_step_recommendation": "Please discuss colorectal cancer screening options with your provider as you approach the recommended screening age.",
+                    "supporting_evidence": "The patient's health data does not include any encounters, procedures, or observations indicating a discussion or planning for colorectal cancer screening.",
                     "user_input_questions": [
-                        "Have you ever been tested for HIV?",
-                        "Have you ever been tested for hepatitis C?"
+                        "Have you discussed colorectal cancer screening options with your provider?",
+                        "Have you scheduled an appointment to talk about colorectal cancer screening?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo HIV screening.",
+                        "importance": "High",
+                        "recommendation_reason": "Routine HIV screening is recommended for all adults between 15 and 65 years for early detection.",
+                        "benefit": "Enables early treatment to improve health outcomes and reduce transmission risk.",
+                        "impact_of_not_doing": "Undiagnosed HIV can lead to serious health complications and spread of the virus.",
+                        "frequency": "At least once, with repeat testing if risk factors are present.",
+                        "source": "USPSTF",
+                        "recommendation_short_str": "HIV screening.",
+                        "frequency_short_str": "Once, then as needed"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient if they have undergone an HIV screening recently. If not, recommend scheduling an HIV screening as per the guidelines.",
+                    "supporting_evidence": "The patient's health data does not include any record of HIV screening or related diagnostic tests.",
+                    "user_input_questions": [
+                        "Have you had an HIV screening test in the past year?",
+                        "Did your healthcare provider mention that you underwent an HIV screening?"
                     ]
                 }
             ]
         },
         {
-            "category_name": "Immunizations",
+            "category_name": "Obesity & Metabolic",
             "activities": [
                 {
                     "activity": {
-                        "recommendation": "Receive annual influenza and COVID-19 vaccinations as recommended.",
+                        "recommendation": "Consult with a healthcare provider for a comprehensive obesity management plan including nutrition, physical activity, and weight loss options.",
                         "importance": "High",
-                        "recommendation_reason": "Routine vaccinations help protect against seasonal flu and COVID-19, reducing risk of complications.",
-                        "benefit": "Provides immunity against common respiratory infections.",
-                        "impact_of_not_doing": "Increases susceptibility to infections and potential serious complications.",
-                        "frequency": "Annually for influenza; as recommended for COVID-19",
-                        "source": "Centers for Disease Control and Prevention (CDC) guidelines",
-                        "recommendation_short_str": "Flu & COVID vaccine",
-                        "frequency_short_str": "Annually/as rec."
+                        "recommendation_reason": "Obesity significantly increases the risk for multiple chronic diseases.",
+                        "benefit": "A tailored management plan can lead to weight reduction and improved metabolic health.",
+                        "impact_of_not_doing": "Without a management plan, obesity-related complications may worsen.",
+                        "frequency": "At least once initially, with follow-up visits as advised.",
+                        "source": "USPSTF, NIH Obesity Guidelines",
+                        "recommendation_short_str": "Obesity management consult.",
+                        "frequency_short_str": "Initial & follow-up"
                     },
-                    "status": "Partially completed",
-                    "next_step_recommendation": "Obtain an updated COVID-19 vaccination as recommended to ensure current protection.",
-                    "supporting_evidence": "The patient's immunization records indicate receipt of an influenza vaccine on 2024-07-01, however, the only documented COVID-19 vaccinations were administered in April and May 2021.",
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Schedule a consultation with a healthcare provider to discuss a comprehensive obesity management plan that includes nutrition, physical activity, and weight loss strategies.",
+                    "supporting_evidence": "The patient's records indicate obesity with a recent BMI of 37.3 kg/m2 and a history of severe obesity, yet there is no clear documentation of an obesity management consultation or a comprehensive plan addressing this issue.",
                     "user_input_questions": [
-                        "Have you received any COVID-19 booster or updated vaccination since 2021?"
+                        "Have you recently had a consultation with a healthcare provider specifically about managing your obesity?",
+                        "Did your recent consultation include discussion of a comprehensive plan for diet, exercise, and weight loss?"
                     ]
                 },
                 {
                     "activity": {
-                        "recommendation": "Ensure tetanus-diphtheria (Td/Tdap) booster is up to date.",
+                        "recommendation": "Aim for at least 150 minutes of moderate-intensity aerobic activity per week along with resistance training on 2 or more days.",
                         "importance": "High",
-                        "recommendation_reason": "Keeping immunizations current is essential for ongoing protection against tetanus and diphtheria.",
-                        "benefit": "Maintains long-term immunity to prevent potentially serious infections.",
-                        "impact_of_not_doing": "Outdated immunizations can leave the patient vulnerable to dangerous infections.",
-                        "frequency": "Every 10 years",
-                        "source": "MedlinePlus Medical Encyclopedia",
-                        "recommendation_short_str": "Td/Tdap booster",
+                        "recommendation_reason": "Regular physical activity aids in weight loss and improves cardiovascular health.",
+                        "benefit": "Enhances fitness, supports weight reduction, and lowers the risk of chronic diseases.",
+                        "impact_of_not_doing": "A sedentary lifestyle increases the likelihood of heart disease and type 2 diabetes.",
+                        "frequency": "150 minutes per week plus resistance training at least 2 times weekly.",
+                        "source": "CDC, ACSM Guidelines",
+                        "recommendation_short_str": "150 min/week activity.",
+                        "frequency_short_str": "Weekly routine"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you are meeting the recommended 150 minutes of moderate aerobic activity and performing resistance exercise at least twice weekly.",
+                    "supporting_evidence": "The health data includes ongoing care plans such as 'Musculoskeletal care' and a 'Diabetes self management plan' that mention physical exercises and exercise therapy, but there is no specific documentation of the duration or frequency of activities in recent encounters.",
+                    "user_input_questions": [
+                        "Have you engaged in at least 150 minutes of moderate-intensity aerobic activity in the past week?",
+                        "Have you performed resistance training on at least two days in the past week?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Adopt a balanced, calorie-controlled diet, considering referral to a dietitian.",
+                        "importance": "High",
+                        "recommendation_reason": "A calorie-controlled diet is essential for sustainable weight loss in obesity.",
+                        "benefit": "Supports weight reduction and improves metabolic parameters.",
+                        "impact_of_not_doing": "Poor dietary habits can worsen obesity and elevate diabetes risk.",
+                        "frequency": "Daily adherence as part of routine eating habits.",
+                        "source": "CDC, NIH Obesity Guidelines",
+                        "recommendation_short_str": "Calorie-controlled diet.",
+                        "frequency_short_str": "Daily"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient if they recently started following a balanced, calorie-controlled diet or had a consultation with a dietitian.",
+                    "supporting_evidence": "The patient record shows historical care plans mentioning 'healthy diet' and 'diabetic diet' from 2005-2006, but there is no recent documentation or evidence of a current dietary intervention. Additionally, the persistent elevated BMI (37.3 kg/m2) suggests that there is no recent effective dietary change recorded.",
+                    "user_input_questions": [
+                        "Have you been following a balanced, calorie-controlled diet recently?",
+                        "Have you had a consultation with a dietitian regarding your diet?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Monitor blood glucose levels annually to detect progression from prediabetes to type 2 diabetes.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient has prediabetes and obesity, increasing the risk for developing type 2 diabetes.",
+                        "benefit": "Enables timely intervention to halt or delay disease progression.",
+                        "impact_of_not_doing": "Lack of monitoring may result in undetected diabetes and related complications.",
+                        "frequency": "Once every 12 months.",
+                        "source": "American Diabetes Association Standards of Care",
+                        "recommendation_short_str": "Annual glucose check.",
+                        "frequency_short_str": "Once yearly"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient’s data includes a basic metabolic panel on 2024-07-01 that reports a blood glucose level of 91.4 mg/dL, demonstrating that an annual blood glucose check was performed within the prescribed timeframe.",
+                    "user_input_questions": null
+                }
+            ]
+        },
+        {
+            "category_name": "Vaccinations",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Receive an annual influenza vaccine.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Obesity heightens the risk of complications from influenza.",
+                        "benefit": "Reduces the likelihood and severity of flu infection.",
+                        "impact_of_not_doing": "Increases the risk of severe flu and its complications.",
+                        "frequency": "Once every flu season (annually).",
+                        "source": "CDC Adult Immunization Schedule",
+                        "recommendation_short_str": "Get flu shot.",
+                        "frequency_short_str": "Yearly"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not received your influenza vaccine for the current season, please schedule an appointment to get vaccinated.",
+                    "supporting_evidence": "The patient's immunization records show influenza vaccines administered on 2024-07-01, 2022-06-27, 2020-06-22, and 2017-09-04. However, there is no record of an influenza vaccine in 2025, and the current date is May 2025.",
+                    "user_input_questions": [
+                        "Have you received an influenza vaccine since July 2024?",
+                        "Have you had your flu shot for this current season?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Be up to date on your Tdap vaccine and Td booster every 10 years.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Maintaining immunization protects against tetanus, diphtheria, and pertussis.",
+                        "benefit": "Prevents serious infections and complications.",
+                        "impact_of_not_doing": "Missed boosters can increase vulnerability to preventable diseases.",
+                        "frequency": "Once every 10 years (with one-time Tdap if not previously received).",
+                        "source": "CDC Adult Immunization Schedule",
+                        "recommendation_short_str": "Td/Tdap booster.",
                         "frequency_short_str": "Every 10 yrs"
                     },
                     "status": "Completed",
                     "next_step_recommendation": null,
-                    "supporting_evidence": "The patient's immunization record from 2022-06-27 indicates that they received a Td (adult) vaccine. Given that the recommended frequency is every 10 years and the current date is 2025-05-17, the booster is up to date.",
+                    "supporting_evidence": "The patient's immunizations include a record for 'Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed' on 2022-06-27, which is within the 10-year timeframe specified by the recommendation.",
                     "user_input_questions": null
-                }
-            ]
-        },
-        {
-            "category_name": "Oral & Vision Health",
-            "activities": [
-                {
-                    "activity": {
-                        "recommendation": "Visit the dentist for an examination and cleaning 1-2 times per year.",
-                        "importance": "High",
-                        "recommendation_reason": "The patient has a history of gingivitis and dental caries.",
-                        "benefit": "Regular dental care prevents oral health issues and maintains overall oral hygiene.",
-                        "impact_of_not_doing": "May lead to worsening dental problems, infections, and potential tooth loss.",
-                        "frequency": "1-2 times per year",
-                        "source": "American Dental Association guidelines",
-                        "recommendation_short_str": "Dental checkup 1-2x/yr",
-                        "frequency_short_str": "1-2x/yr"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Please confirm if you have had a dental examination and cleaning within the past 12 months. If not, schedule a dental visit as soon as possible.",
-                    "supporting_evidence": "The patient's record shows extensive dental-related procedures in 2020 and 2022 (including dental referrals, examinations, and plaque removal) but does not document any dental check-up or cleaning in more recent years (i.e., within the last 12 months relative to the current date of 2025-05-17).",
-                    "user_input_questions": [
-                        "Have you visited a dentist for an examination and cleaning in the past 12 months?"
-                    ]
                 },
                 {
                     "activity": {
-                        "recommendation": "Undergo an eye examination every 2-4 years.",
+                        "recommendation": "Receive a COVID-19 booster vaccine as per current CDC recommendations.",
                         "importance": "Medium",
-                        "recommendation_reason": "Routine eye exams help detect vision problems early.",
-                        "benefit": "Timely identification and management of eye conditions can preserve vision.",
-                        "impact_of_not_doing": "Delayed diagnosis may result in progressive vision impairment.",
-                        "frequency": "Every 2-4 years",
-                        "source": "MedlinePlus Medical Encyclopedia",
-                        "recommendation_short_str": "Eye exam 2-4 yrs",
-                        "frequency_short_str": "Every 2-4 yrs"
+                        "recommendation_reason": "Given obesity is a risk factor for severe COVID-19, booster vaccination is important.",
+                        "benefit": "Enhances protection against severe COVID-19 illness and complications.",
+                        "impact_of_not_doing": "Increases risk of severe disease during COVID-19 outbreaks.",
+                        "frequency": "According to the latest CDC guidance.",
+                        "source": "CDC COVID-19 Vaccine Recommendations",
+                        "recommendation_short_str": "COVID-19 booster.",
+                        "frequency_short_str": "Per CDC guidance"
                     },
                     "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have had an eye exam within the recommended time frame to confirm adherence.",
-                    "supporting_evidence": "The patient data contains numerous dental and general health records, but there is no record of any eye examination or ophthalmology-specific procedure.",
+                    "next_step_recommendation": "Ask the patient to confirm if they have received a COVID-19 booster vaccine. If not, they should schedule a booster shot as per CDC recommendations.",
+                    "supporting_evidence": "The immunization records show two COVID-19 mRNA vaccine doses in 2021, which likely represent the initial series, but there is no documented record of a booster vaccine.",
                     "user_input_questions": [
-                        "Have you had an eye examination in the past 2 to 4 years?",
-                        "Was your most recent eye exam performed by an eye care specialist?"
+                        "Have you received a COVID-19 booster shot after your initial vaccine doses?",
+                        "Since 2021, have you had any additional COVID-19 vaccinations?"
                     ]
                 }
             ]
         },
         {
-            "category_name": "Lifestyle & Access",
+            "category_name": "Mental Health",
             "activities": [
                 {
                     "activity": {
-                        "recommendation": "Engage in at least 150 minutes of moderate-intensity aerobic physical activity per week.",
-                        "importance": "High",
-                        "recommendation_reason": "Physical activity is crucial for managing obesity and improving cardiovascular health.",
-                        "benefit": "Helps with weight management, reduces stress, and improves overall fitness.",
-                        "impact_of_not_doing": "Sedentary lifestyle can exacerbate obesity and increase risk of chronic diseases.",
-                        "frequency": "Weekly",
-                        "source": "BETTER LIFE guidelines",
-                        "recommendation_short_str": "150 min exercise weekly",
-                        "frequency_short_str": "Weekly"
+                        "recommendation": "Undergo routine screening for depression, anxiety, and suicide risk during healthcare visits.",
+                        "importance": "Medium",
+                        "recommendation_reason": "A history of mild anxiety and depression, compounded by obesity, warrants regular mental health assessment.",
+                        "benefit": "Facilitates early intervention and appropriate mental health support.",
+                        "impact_of_not_doing": "Unaddressed mental health issues can adversely affect overall well-being.",
+                        "frequency": "At every annual or routine healthcare visit.",
+                        "source": "USPSTF Mental Health Screening Guidelines",
+                        "recommendation_short_str": "Mental health screening.",
+                        "frequency_short_str": "At routine visits"
                     },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they completed at least 150 minutes of moderate-intensity aerobic activity in the past week.",
-                    "supporting_evidence": "While the care plans indicate a recommendation for physical exercise (e.g., Musculoskeletal care with the activity 'Physical exercises' and Diabetes self management plan including 'Exercise therapy'), there is no direct record of duration or evidence that the patient met the 150 minutes per week goal.",
-                    "user_input_questions": [
-                        "Have you engaged in at least 150 minutes of moderate-intensity aerobic exercise in the past week?",
-                        "Did you follow a structured exercise routine as recommended by your care provider this week?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Adopt a balanced, calorie-controlled diet rich in fruits, vegetables, whole grains, and lean proteins daily.",
-                        "importance": "High",
-                        "recommendation_reason": "A healthy diet is essential for managing obesity and prediabetes.",
-                        "benefit": "Supports weight loss, improves blood sugar control, and reduces cardiovascular risk.",
-                        "impact_of_not_doing": "Poor nutrition can lead to worsening obesity and increased risk for diabetes.",
-                        "frequency": "Daily",
-                        "source": "BETTER LIFE guidelines",
-                        "recommendation_short_str": "Healthy diet daily",
-                        "frequency_short_str": "Daily"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient about their adherence to a balanced, calorie-controlled diet and consider offering dietary counseling if needed.",
-                    "supporting_evidence": "Although the patient's care plans include entries for 'Healthy diet' and 'Diabetic diet', there is no clear recent documentation (e.g., detailed counseling notes or specific dietary modifications) confirming that the patient has adopted a balanced, calorie-controlled eating pattern. Also, the most recent BMI (37.3 kg/m²) remains elevated, which does not clearly indicate a successful dietary change.",
-                    "user_input_questions": [
-                        "Have you been following the recommended balanced, calorie-controlled diet daily?",
-                        "Have you noticed any improvements in your eating habits or changes in your weight since starting this diet?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Participate in stress management programs or counseling as needed.",
-                        "importance": "High",
-                        "recommendation_reason": "The patient has a history of moderate anxiety and mild depression.",
-                        "benefit": "Helps to manage stress, reduce anxiety, and improve overall mental well-being.",
-                        "impact_of_not_doing": "Unmanaged stress may worsen mental health and affect daily functioning.",
-                        "frequency": "As needed",
-                        "source": "BETTER LIFE guidelines",
-                        "recommendation_short_str": "Stress mgmt as needed",
-                        "frequency_short_str": "As needed"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have participated in any stress management programs or counseling sessions since being noted for stress.",
-                    "supporting_evidence": "The patient's records show a condition of stress noted from 2020 along with depression and anxiety assessments, but there is no documentation of participation in any stress management or counseling programs.",
-                    "user_input_questions": [
-                        "Have you attended any stress management sessions or counseling appointments recently?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Utilize affordable care services, including Federally Qualified Health Centers (FQHCs) and telehealth consultations, as needed.",
-                        "importance": "High",
-                        "recommendation_reason": "The patient is uninsured and faces transportation challenges.",
-                        "benefit": "Ensures access to comprehensive primary care without financial or logistical barriers.",
-                        "impact_of_not_doing": "Lack of access may lead to unmanaged conditions and delayed treatment.",
-                        "frequency": "As needed",
-                        "source": "Federally Qualified Health Center information",
-                        "recommendation_short_str": "Use affordable care",
-                        "frequency_short_str": "As needed"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have recently accessed affordable care services such as visiting a Federally Qualified Health Center or using telehealth consultations for their care.",
-                    "supporting_evidence": "The patient's records include several encounters, procedures, and referrals (including dental care referrals) at various centers; however, there is no explicit documentation indicating that they utilized affordable care services like FQHCs or telehealth consultations as recommended. The data shows that the patient is uninsured and has reported transportation challenges, which supports the need for such services, but does not confirm that the patient engaged with them.",
-                    "user_input_questions": [
-                        "Have you visited a Federally Qualified Health Center (FQHC) for your care recently?",
-                        "Have you had any telehealth consultations for your health concerns as recommended?"
-                    ]
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "On 2024-07-01, the patient underwent multiple relevant procedures including 'Depression screening using Patient Health Questionnaire Nine Item score', additional depression screening procedures, and an 'Assessment of anxiety'. These procedures, along with the corresponding observations (PHQ-9 score: 7.0, PHQ-2 score: 4.0, GAD-7 score: 11.0), indicate that the routine mental health screening recommendation has been fulfilled.",
+                    "user_input_questions": null
                 }
             ]
         }
     ],
-    "assessment_date": "2025-05-17 16:23:56"
+    "assessment_date": "2025-05-17 18:17:01"
 }
