@@ -3,10 +3,9 @@ import Accordion from '@mui/material/Accordion';
 
 const StyledCategoryListItem = styled(Accordion)`
 
-        box-shadow: none !important;
-        &:before {
-    display: none;
-
+    box-shadow: none !important;
+    &:before {
+        display: none;
     }
     .MuiAccordionSummary-content{
         display: block;
@@ -38,9 +37,10 @@ const StyledCategoryListItem = styled(Accordion)`
 `
 
 export const StyledActivityListItem = styled.div`
-display: flex;
+    .activityListItem{display: flex;
     justify-content: space-between;
     align-items: center;
+    }
     h3{
         margin-bottom: 0;
     }

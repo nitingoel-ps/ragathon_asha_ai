@@ -34,3 +34,7 @@ export type Status =
   | 'Needs user confirmation'
   | 'Partially completed'
   | 'Not started';
+
+export interface AnswerData {
+  [questionIndex: number]: 'yes' | 'no';
+}
