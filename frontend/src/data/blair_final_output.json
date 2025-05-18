@@ -1,0 +1,244 @@
+{
+    "categories": [
+        {
+            "category_name": "Health Screenings",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Have an annual comprehensive physical exam that includes blood pressure measurement, BMI calculation, and medication review.",
+                        "importance": "High",
+                        "recommendation_reason": "At 44 years old, regular physical examinations are crucial for early detection of conditions common in middle age.",
+                        "benefit": "Early identification of hypertension, obesity, and other conditions can lead to timely interventions.",
+                        "impact_of_not_doing": "Missing regular exams may delay diagnosis of serious health issues, leading to complications.",
+                        "frequency": "Annually",
+                        "source": "USPSTF Adult Preventive Health Care Schedule",
+                        "recommendation_short_str": "Annual physical exam",
+                        "frequency_short_str": "Annually"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient’s record from 2024-07-01 shows multiple components of a comprehensive physical exam: a blood pressure panel with recorded systolic (101 mm Hg) and diastolic (72 mm Hg) pressures, a documented BMI of 37.3 kg/m² along with weight and height, and a medication reconciliation procedure. These data points indicate that the recommended annual comprehensive physical exam has been completed within the prescribed timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo cholesterol screening to assess cardiovascular health.",
+                        "importance": "High",
+                        "recommendation_reason": "Middle-aged men have increased risk of dyslipidemia, which can predispose to heart disease.",
+                        "benefit": "Detecting abnormal cholesterol levels early enables interventions that reduce heart attack and stroke risk.",
+                        "impact_of_not_doing": "Undetected high cholesterol may lead to increased risk of cardiovascular events.",
+                        "frequency": "Every 4-6 years if normal; more frequently if risk factors are present",
+                        "source": "USPSTF and American Heart Association guidelines",
+                        "recommendation_short_str": "Cholesterol screening",
+                        "frequency_short_str": "4-6 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's 2022-06-27 lipid panel includes measurements for total cholesterol (149.6 mg/dL), LDL cholesterol (67.1 mg/dL), HDL cholesterol (54.7 mg/dL), and triglycerides (139.1 mg/dL), which indicates that a cholesterol screening was performed. This aligns with the recommendation to undergo cholesterol screening.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Plan for colorectal cancer screening starting at age 45 via colonoscopy, FIT, or sigmoidoscopy as recommended.",
+                        "importance": "High",
+                        "recommendation_reason": "Screening is recommended for early detection of colorectal cancer, which dramatically improves outcomes.",
+                        "benefit": "Early detection can significantly improve survival rates and treatment success.",
+                        "impact_of_not_doing": "Delayed screening increases the risk of detecting colorectal cancer at an advanced stage.",
+                        "frequency": "Initiate at age 45, then follow test-specific guidelines",
+                        "source": "USPSTF Colorectal Cancer Screening Recommendations",
+                        "recommendation_short_str": "Plan colorectal screening",
+                        "frequency_short_str": "Start at 45"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Advise the patient to plan for colorectal cancer screening (colonoscopy, FIT, or sigmoidoscopy) when they turn 45.",
+                    "supporting_evidence": "The patient is currently 44 years old and there is no record of any colorectal cancer screening procedure in the health data.",
+                    "user_input_questions": [
+                        "Have you already undergone any colorectal cancer screening procedure such as a colonoscopy, FIT, or sigmoidoscopy?",
+                        "Are you planning to schedule colorectal cancer screening when you turn 45?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Get screened for HIV as per current guidelines to ensure early detection and treatment.",
+                        "importance": "High",
+                        "recommendation_reason": "As a sexually active male, regular HIV screening is important for early detection and management.",
+                        "benefit": "Early treatment initiation can greatly improve health outcomes and reduce transmission risk.",
+                        "impact_of_not_doing": "Delayed HIV diagnosis can lead to advanced disease progression and increased health complications.",
+                        "frequency": "Screening at regular intervals based on risk factors",
+                        "source": "USPSTF",
+                        "recommendation_short_str": "HIV screening",
+                        "frequency_short_str": "Regularly"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient if they have received an HIV screening test as per current guidelines.",
+                    "supporting_evidence": "The patient record does not show any procedure, lab test, or specific documentation indicating that an HIV screening test was performed.",
+                    "user_input_questions": [
+                        "Have you been tested for HIV in the past year?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Immunizations",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Receive an annual influenza vaccination to reduce the risk of severe influenza and related complications.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Adults should stay current with the flu vaccine, particularly as obesity increases risk for complications.",
+                        "benefit": "Annual immunization helps prevent severe illness and hospitalization due to influenza.",
+                        "impact_of_not_doing": "Skipping the influenza vaccine can increase the risk of flu infection and its complications.",
+                        "frequency": "Annually, every fall",
+                        "source": "CDC Adult Immunization Schedule 2024",
+                        "recommendation_short_str": "Get flu vaccine",
+                        "frequency_short_str": "Yearly"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's immunization records show that they received an influenza vaccine on 2024-07-01 (Influenza, seasonal, injectable, preservative free), with additional similar records from 2022 and 2020. This indicates that the annual influenza vaccination recommendation has been followed.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Obtain a COVID-19 booster in accordance with the latest CDC guidelines to maintain protection against severe illness.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Staying updated with COVID-19 vaccination is essential for ongoing protection, especially in individuals with comorbidities.",
+                        "benefit": "Reduces the risk of severe COVID-19 infection and its complications.",
+                        "impact_of_not_doing": "Lapsing in COVID vaccination may increase susceptibility to severe disease and hospitalization.",
+                        "frequency": "Booster every 6-12 months as recommended for high-risk individuals",
+                        "source": "CDC Adult Immunization Schedule 2024",
+                        "recommendation_short_str": "Get COVID booster",
+                        "frequency_short_str": "6-12 months"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm with the patient whether they have received a COVID-19 booster since their initial vaccinations. If not, advise scheduling a booster as per the current CDC guidelines.",
+                    "supporting_evidence": "The immunization records list COVID-19 vaccinations dated 2021-05-24 and 2021-04-26 without any subsequent booster dose documented, indicating no record of a booster in the patient's health data.",
+                    "user_input_questions": [
+                        "Have you received a COVID-19 booster shot since your vaccines in 2021?",
+                        "Do you have any medical records or documentation showing a recent COVID-19 booster vaccination?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Receive a Tdap booster every 10 years to maintain protection against tetanus, diphtheria, and pertussis.",
+                        "importance": "Low",
+                        "recommendation_reason": "Routine Tdap boosters are a standard adult immunization to prevent serious bacterial infections.",
+                        "benefit": "Sustains immunity against tetanus, diphtheria, and pertussis, reducing potential health risks.",
+                        "impact_of_not_doing": "Inadequate immunization can leave one vulnerable to these preventable diseases.",
+                        "frequency": "Every 10 years",
+                        "source": "CDC Adult Immunization Schedule 2024",
+                        "recommendation_short_str": "Tdap booster",
+                        "frequency_short_str": "Every 10 yrs"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm if the booster received in 2022 was a Tdap booster that includes pertussis or a Td booster without the pertussis component.",
+                    "supporting_evidence": "The immunization record from 2022-06-27 indicates the patient received a 'Td (adult)' vaccine, which typically contains tetanus and diphtheria toxoids but does not necessarily include the acellular pertussis component that is required in a Tdap booster.",
+                    "user_input_questions": [
+                        "Did you receive a Tdap booster (one that includes protection against pertussis) instead of a Td booster?",
+                        "Was the booster you received in 2022 specifically labeled as Tdap?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Chronic & Lifestyle",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Engage in at least 150 minutes of moderate-intensity exercise (e.g., brisk walking, cycling) and complete 2 muscle-strengthening sessions each week.",
+                        "importance": "High",
+                        "recommendation_reason": "Regular physical activity is essential for managing severe obesity and prediabetes, as well as improving cardiovascular health.",
+                        "benefit": "Enhances weight management, improves glucose control, supports cardiovascular function, and boosts mental health.",
+                        "impact_of_not_doing": "Lack of exercise increases the risk of worsening obesity, diabetes progression, and cardiovascular complications.",
+                        "frequency": "Weekly: 150 minutes of aerobic activity and 2 muscle-strengthening sessions",
+                        "source": "CDC Physical Activity Guidelines for Americans",
+                        "recommendation_short_str": "150 min exercise + 2 strength",
+                        "frequency_short_str": "Weekly"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient whether they have engaged in at least 150 minutes of moderate-intensity exercise and completed 2 muscle-strengthening sessions in the past week.",
+                    "supporting_evidence": "The patient's records include care plans that mention physical exercise and exercise therapy (e.g., the musculoskeletal care plan and diabetes self management plan) but do not provide direct documentation of performed exercises or logged minutes of physical activity.",
+                    "user_input_questions": [
+                        "Have you engaged in at least 150 minutes of moderate-intensity aerobic exercise (such as brisk walking or cycling) in the past week?",
+                        "Have you completed at least 2 muscle-strengthening sessions in the past week?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Review your dietary plan with a registered dietitian and follow a low-glycemic, calorie-controlled diet to achieve 5-10% weight loss over 6-12 months.",
+                        "importance": "High",
+                        "recommendation_reason": "Severe obesity and prediabetes necessitate nutritional intervention to improve metabolic health.",
+                        "benefit": "Promotes sustainable weight loss, improves blood glucose levels, and reduces cardiovascular risks.",
+                        "impact_of_not_doing": "Failure to manage diet can lead to continued obesity, worsening prediabetes, and associated complications.",
+                        "frequency": "Every 3 months",
+                        "source": "ADA Standards of Medical Care 2024 and Obesity Guidelines",
+                        "recommendation_short_str": "Diet consult for weight loss",
+                        "frequency_short_str": "Every 3 mos"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm if the patient has met with a dietitian and followed the low-glycemic, calorie-controlled diet. If not, advise scheduling a consultation with a registered dietitian.",
+                    "supporting_evidence": "The patient's health record includes a current Diabetes self-management plan that mentions a diabetic diet, but there is no clear evidence of a recent dietary consult, structured nutritional counseling, or documentation about achieving weight loss.",
+                    "user_input_questions": [
+                        "Have you met with a registered dietitian in the past 6-12 months to review your dietary plan?",
+                        "Have you been following a low-glycemic, calorie-controlled diet as recommended for weight loss?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Update your diabetes self-management plan and monitor HbA1c every 6 months to prevent progression of prediabetes.",
+                        "importance": "High",
+                        "recommendation_reason": "Given the presence of prediabetes and obesity, regular monitoring helps in timely intervention.",
+                        "benefit": "Helps prevent the transition to type 2 diabetes and minimizes the risk of complications.",
+                        "impact_of_not_doing": "Inadequate monitoring can lead to poor glycemic control and increased risk of diabetes-related complications.",
+                        "frequency": "Every 6 months",
+                        "source": "ADA Diabetes Standards of Medical Care 2024",
+                        "recommendation_short_str": "Update diabetes plan, HbA1c check",
+                        "frequency_short_str": "Every 6 mos"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not updated your diabetes self-management plan recently or had your HbA1c test within the last 6 months, please update your plan and schedule an HbA1c test.",
+                    "supporting_evidence": "The patient's record shows an ongoing diabetes self-management plan since 2005 and an HbA1c result from 2024-07-01 (6.0%). Given the current date of 2025-05-17, it is unclear if the plan has been updated or if the HbA1c monitoring has followed the recommended 6-month interval.",
+                    "user_input_questions": [
+                        "Have you updated your diabetes self-management plan in the last 6 months?",
+                        "Have you had an HbA1c test within the past 6 months?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Have an annual kidney function assessment including serum creatinine, eGFR, and urine albumin tests.",
+                        "importance": "High",
+                        "recommendation_reason": "Slightly elevated creatinine levels and risk factors like obesity and prediabetes warrant regular kidney monitoring.",
+                        "benefit": "Early detection of kidney impairment enables timely management to prevent progression to chronic kidney disease.",
+                        "impact_of_not_doing": "Delayed detection of kidney issues can result in irreversible damage and eventual kidney failure.",
+                        "frequency": "Once every 12 months",
+                        "source": "KDIGO Guidelines; ADA Standards 2024",
+                        "recommendation_short_str": "Annual kidney function test",
+                        "frequency_short_str": "Yearly"
+                    },
+                    "status": "Partially completed",
+                    "next_step_recommendation": "Obtain the full panel for kidney function assessment including urine albumin and eGFR calculation, in addition to serum creatinine, to complete the evaluation.",
+                    "supporting_evidence": "The patient's 2024-07-01 basic metabolic panel includes a serum creatinine result (1.4 mg/dL), which is part of the kidney function assessment. However, there is no record of a urine albumin test or explicit eGFR value, which are required for the complete assessment.",
+                    "user_input_questions": []
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo routine mental health evaluations for anxiety and depression every 6-12 months.",
+                        "importance": "High",
+                        "recommendation_reason": "Documented moderate anxiety and mild depression necessitate regular mental health monitoring.",
+                        "benefit": "Timely intervention can improve overall well-being and prevent worsening of mental health symptoms.",
+                        "impact_of_not_doing": "Failure to monitor mental health may lead to exacerbation of symptoms and reduced quality of life.",
+                        "frequency": "Every 6-12 months",
+                        "source": "USPSTF and APA Guidelines 2024",
+                        "recommendation_short_str": "Mental health evaluation",
+                        "frequency_short_str": "6-12 mos"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's record from 2024-07-01 shows mental health evaluations including a depression screening using the PHQ-9 and PHQ-2, as well as an anxiety assessment (GAD-7). These evaluations align with the recommendation for routine mental health monitoring every 6-12 months.",
+                    "user_input_questions": null
+                }
+            ]
+        }
+    ],
+    "assessment_date": "2025-05-17 19:44:17"
+}

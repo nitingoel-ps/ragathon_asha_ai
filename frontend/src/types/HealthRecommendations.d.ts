@@ -13,7 +13,7 @@ export interface Activity {
 
 export interface ActivityItem {
   activity: Activity;
-  status: 'Completed' | 'Needs user confirmation';
+  status: Status;
   next_step_recommendation: string | null;
   supporting_evidence: string;
   user_input_questions: string[] | null;
@@ -28,3 +28,9 @@ export interface HealthRecommendations {
   categories: Category[];
   assessment_date: string;
 }
+
+export type Status =
+  | 'Completed'
+  | 'Needs user confirmation'
+  | 'Partially completed'
+  | 'Not started';
