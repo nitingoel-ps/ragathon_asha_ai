@@ -3,18 +3,18 @@ import { useEffect, useState } from 'react';
 
 /* Internal Dependencies */
 // Services
-import { fetchHealthData } from '../../services/fetchHealthData';
+import { fetchHealthData } from '../../../services/fetchHealthData';
 // Utilities
 import calculateProgress from './calculateProgress';
 // Types
-import type { HealthRecommendations, Category, ActivityItem } from '../../types/HealthRecommendations';
-import type { Progress, CategoryProgress } from '../../types/Progress';
+import type { HealthRecommendations, Category, ActivityItem } from '../../../types/HealthRecommendations';
+import type { Progress, CategoryProgress } from '../../../types/Progress';
 // Styles
 import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
 // Components
-import Header from '../Header';
-import Footer from '../Footer';
-import ScoreDial from '../ScoreDial/ScoreDial';
+import Header from '../../layout/Header';
+import Footer from '../../layout/Footer';
+import ScoreDial from '../../ui/ScoreDial/ScoreDial';
 
 
 function HealthEngagementPage() {

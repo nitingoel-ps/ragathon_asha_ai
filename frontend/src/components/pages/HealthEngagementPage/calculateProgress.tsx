@@ -1,5 +1,5 @@
-import type { HealthRecommendations, Category } from "../../types/HealthRecommendations";
-import type { Progress, CategoryProgress } from "../../types/Progress";
+import type { HealthRecommendations, Category } from "../../../types/HealthRecommendations";
+import type { Progress, CategoryProgress } from "../../../types/Progress";
 export default function calculateProgress(healthData: HealthRecommendations) {
     const categories = healthData.categories;
     const categoryProgress: Record<string, CategoryProgress> = {};
