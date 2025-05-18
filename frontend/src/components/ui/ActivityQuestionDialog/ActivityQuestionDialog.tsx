@@ -10,6 +10,8 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Collapse from '@mui/material/Collapse';
+import Link from '@mui/material/Link';
 
 import type { ActivityItem, AnswerData } from "../../../types/HealthRecommendations";
 
@@ -22,7 +24,7 @@ export default function ActivityQuestionDialog({
     handleCloseDialog: (answers?: AnswerData) => void,
     dialogOpen: boolean
 }) {
-
+    const [showReason, setShowReason] = useState(false);
 
     return (
         <Dialog
@@ -34,6 +36,19 @@ export default function ActivityQuestionDialog({
         >
             <DialogTitle id="alert-dialog-title">
                 <h2>{activityData.activity.recommendation}</h2>
+                <Link
+                    component="button"
+                    variant="body2"
+                    onClick={() => setShowReason(!showReason)}
+                    sx={{ display: 'block', mt: 1 }}
+                >
+                    {showReason ? 'Hide why?' : 'See why?'}
+                </Link>
+                <Collapse in={showReason}>
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                        {activityData.activity.recommendation_reason}
+                    </Typography>
+                </Collapse>
             </DialogTitle>
             <DialogContent>
                 {(activityData.status === 'Not started' || activityData.status === 'Needs user confirmation' || activityData.status === 'Partially completed') &&
