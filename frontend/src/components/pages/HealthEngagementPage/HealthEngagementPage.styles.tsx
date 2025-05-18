@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const StyledHealthEngagementPage = styled.div`
     .mainContent{
         padding-inline: 15px;
+        padding-top: 60px;
+        padding-bottom: 100px;
     }
     .scoreCard{
         display: grid;
@@ -22,5 +24,16 @@ export const StyledHealthEngagementPage = styled.div`
     }
     .fullWidthImage {
         width: 100vw;
+    }
+    .fullWidthImage{
+        z-index: ${(props) => props.theme.zIndex.sticky};
+        position: fixed;
+        left: 0;
+        &#header{
+            top: 0;
+        }
+        &#footer{
+            bottom: 0;
+        }
     }
 `

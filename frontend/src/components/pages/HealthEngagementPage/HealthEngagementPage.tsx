@@ -55,6 +55,7 @@ function HealthEngagementPage() {
                             key={category.category_name}
                             categoryData={category}
                             categoryProgress={progress.categoryProgress[category.category_name]}
+                            index={i}
                             color={theme.colors.categories[i % theme.colors.categories.length]}
                         />
                     ))}

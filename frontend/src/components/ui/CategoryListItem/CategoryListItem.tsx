@@ -1,4 +1,6 @@
 /* External Dependencies */
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 // Icons
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import HelpTwoToneIcon from '@mui/icons-material/HelpTwoTone';
@@ -15,25 +17,29 @@ import type { CategoryProgress } from '../../../types/Progress';
 // Components
 import ProgressBar from '../ProgressBar/ProgressBar';
 
-export default function CategoryListItem({ categoryData, categoryProgress, color }: { categoryData: Category, categoryProgress: CategoryProgress, color: string }) {
+export default function CategoryListItem({ categoryData, categoryProgress, color, index }: { categoryData: Category, categoryProgress: CategoryProgress, color: string, index: number }) {
     return (
-        <StyledCategoryListItem className="categoryListItem">
-            <div className="categoryItemHeader">
-                <h2>{categoryData.category_name}</h2>
-                <p>{categoryProgress.progress}/{categoryProgress.totalActivities}</p>
-            </div>
-            <ProgressBar
-                variant="determinate" value={(categoryProgress.progress / categoryProgress.totalActivities) * 100}
-                barColor={color} />
-            <div className="activityList">
-                {categoryData.activities.map((activityItem) => (
-                    <ActivityListItem
-                        key={activityItem.activity.recommendation_short_str}
-                        activityItem={activityItem}
-                        color={color}
-                    />
-                ))}
-            </div>
+        <StyledCategoryListItem className="categoryListItem" defaultExpanded={index === 0}>
+            <AccordionSummary>
+                <div className="categoryItemHeader">
+                    <h2>{categoryData.category_name}</h2>
+                    <p>{categoryProgress.progress}/{categoryProgress.totalActivities}</p>
+                </div>
+                <ProgressBar
+                    variant="determinate" value={(categoryProgress.progress / categoryProgress.totalActivities) * 100}
+                    barColor={color} />
+            </AccordionSummary>
+            <AccordionDetails>
+                <div className="activityList">
+                    {categoryData.activities.map((activityItem) => (
+                        <ActivityListItem
+                            key={activityItem.activity.recommendation_short_str}
+                            activityItem={activityItem}
+                            color={color}
+                        />
+                    ))}
+                </div>
+            </AccordionDetails>
         </StyledCategoryListItem>
     )
 }
