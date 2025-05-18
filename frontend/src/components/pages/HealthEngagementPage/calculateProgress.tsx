@@ -27,7 +27,7 @@ function calculateCategoryProgress(category: Category): CategoryProgress {
             if (activity.status === 'Completed') {
                 return sum + 1;
             }
-            else if (activity.status === 'Partial') {
+            else if (activity.status === 'Partially completed') {
                 return sum + 0.5;
             }
             return sum;

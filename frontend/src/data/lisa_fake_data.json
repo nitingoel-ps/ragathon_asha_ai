@@ -1,0 +1,249 @@
+{
+    "categories": [
+        {
+            "category_name": "Cancer Screenings",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Undergo a mammogram every two years.",
+                        "importance": "High",
+                        "recommendation_reason": "Patient is a 51-year-old woman and current guidelines recommend biennial mammograms for women aged 40 to 74.",
+                        "benefit": "Early detection of breast cancer improves treatment outcomes and survival.",
+                        "impact_of_not_doing": "Skipping mammograms may lead to delayed detection of breast cancer.",
+                        "frequency": "Every 2 years",
+                        "source": "U.S. Preventive Services Task Force",
+                        "recommendation_short_str": "Biennial mammogram",
+                        "frequency_short_str": "Every 2 years"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not had a mammogram recently, please schedule one as recommended.",
+                    "supporting_evidence": "A review of the patient’s procedures, imaging studies, and encounter records shows no documentation of a mammogram or any breast imaging procedure.",
+                    "user_input_questions": [
+                        "Have you undergone a mammogram in the last two years?",
+                        "Was your mammogram performed at a facility that may not be included in these records?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo colorectal cancer screening with colonoscopy every 10 years.",
+                        "importance": "High",
+                        "recommendation_reason": "Patient is over 50 and screening is recommended for adults over 45.",
+                        "benefit": "Early detection increases treatment success for colorectal cancer.",
+                        "impact_of_not_doing": "Delayed screening may lead to late-stage colorectal cancer with fewer treatment options.",
+                        "frequency": "Every 10 years",
+                        "source": "American Cancer Society / USPSTF",
+                        "recommendation_short_str": "Colorectal screening",
+                        "frequency_short_str": "Every 10 years"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you haven't already had it, please schedule a colonoscopy to complete your colorectal cancer screening.",
+                    "supporting_evidence": "A review of the patient's procedure records and related observations shows no evidence of a colonoscopy or any other colorectal cancer screening procedure being performed.",
+                    "user_input_questions": [
+                        "Have you undergone a colonoscopy in the past 10 years?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo cervical cancer screening every 5 years.",
+                        "importance": "High",
+                        "recommendation_reason": "At 51, the patient is within the recommended age for cervical cancer screening.",
+                        "benefit": "Detecting precancerous changes early can prevent cervical cancer.",
+                        "impact_of_not_doing": "Missing screenings may delay diagnosis and lead to advanced cervical cancer.",
+                        "frequency": "Every 5 years",
+                        "source": "USPSTF",
+                        "recommendation_short_str": "Cervical screening",
+                        "frequency_short_str": "Every 5 years"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm with the patient whether they have had a cervical cancer screening (e.g., Pap smear or HPV test) within the last 5 years.",
+                    "supporting_evidence": "The health record shows a cytopathology procedure (preparation of a genital smear) on 2017-01-07 that might be indicative of cervical screening; however, this occurred over 5 years ago. There is no other recent evidence of cervical cancer screening in the patient’s records.",
+                    "user_input_questions": [
+                        "Have you undergone a cervical cancer screening (such as a Pap smear or HPV test) in the last five years?",
+                        "Was your most recent cervical cancer screening performed within the recommended 5-year interval?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Cardio & Metabolic",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Monitor blood pressure at least annually.",
+                        "importance": "High",
+                        "recommendation_reason": "Patient has risk factors such as obesity and elevated cholesterol, increasing hypertension risk.",
+                        "benefit": "Regular monitoring allows for early detection and management of high blood pressure.",
+                        "impact_of_not_doing": "Uncontrolled blood pressure can lead to heart disease, stroke, and kidney problems.",
+                        "frequency": "Annually",
+                        "source": "USPSTF / MedlinePlus",
+                        "recommendation_short_str": "BP monitoring",
+                        "frequency_short_str": "Annually"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient had a blood pressure panel recorded on 2025-03-01 with a systolic reading of 118 mmHg and diastolic reading of 80 mmHg, which meets the annual monitoring recommendation.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo cholesterol screening every 5 years.",
+                        "importance": "High",
+                        "recommendation_reason": "Screening is essential to assess cardiovascular risk in adults.",
+                        "benefit": "Identifying high cholesterol helps in preventing heart disease and stroke.",
+                        "impact_of_not_doing": "Undetected high cholesterol may result in atherosclerosis and increased cardiovascular events.",
+                        "frequency": "Every 5 years",
+                        "source": "MedlinePlus",
+                        "recommendation_short_str": "Cholesterol screen",
+                        "frequency_short_str": "Every 5 years"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient had a lipid panel on 2024-02-24 with measurements including Total Cholesterol of 214.2 mg/dL, LDL of 136.5 mg/dL, and HDL of 50.8 mg/dL. This screening falls within the 5-year interval recommended for cholesterol screening.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Undergo screening for type 2 diabetes every 3 years.",
+                        "importance": "High",
+                        "recommendation_reason": "Given her age, obesity, and prediabetes, periodic diabetes screening is crucial.",
+                        "benefit": "Early diagnosis allows for timely management to prevent complications.",
+                        "impact_of_not_doing": "Undiagnosed diabetes can lead to kidney failure, cardiovascular issues, and other complications.",
+                        "frequency": "Every 3 years",
+                        "source": "MedlinePlus / USPSTF",
+                        "recommendation_short_str": "Diabetes screen",
+                        "frequency_short_str": "Every 3 years"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient has recent laboratory assessments from 2025-03-01, including a Hemoglobin A1c value of 6.1% and a blood glucose level of 76.6 mg/dL. These lab tests indicate that a diabetes screening was conducted within the recommended 3-year timeframe, consistent with the recommendation for periodic type 2 diabetes screening.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Discuss statin therapy for primary prevention of cardiovascular disease with your provider.",
+                        "importance": "High",
+                        "recommendation_reason": "Due to elevated cholesterol, obesity, and prediabetes, statin therapy may reduce cardiovascular risk.",
+                        "benefit": "Statins can lower cholesterol levels and reduce the risk of heart attacks and strokes.",
+                        "impact_of_not_doing": "Not considering statin therapy may lead to persistently high cholesterol and increased cardiovascular risk.",
+                        "frequency": "As prescribed by healthcare provider",
+                        "source": "USPSTF",
+                        "recommendation_short_str": "Consider statins",
+                        "frequency_short_str": "As prescribed"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask your provider about starting a discussion on statin therapy in light of your elevated cholesterol levels.",
+                    "supporting_evidence": "The lipid panel from 2024-02-24 shows elevated total cholesterol (214.2 mg/dL) and LDL (136.5 mg/dL), which supports that the patient is at risk; however, there is no clear documentation that a discussion regarding statin therapy has taken place.",
+                    "user_input_questions": [
+                        "Have you discussed statin therapy with your provider during any of your recent visits?",
+                        "Has your provider mentioned the possibility of starting statin therapy to address your cholesterol levels?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Engage in intensive behavioral counseling for weight loss.",
+                        "importance": "High",
+                        "recommendation_reason": "With a BMI of 30 indicating obesity, weight management is critical.",
+                        "benefit": "Weight loss can lower the risk of type 2 diabetes and improve overall cardiovascular health.",
+                        "impact_of_not_doing": "Lack of intervention may worsen obesity-related complications and overall health.",
+                        "frequency": "As recommended by healthcare provider",
+                        "source": "USPSTF",
+                        "recommendation_short_str": "Weight loss counseling",
+                        "frequency_short_str": "As needed"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you haven't already participated in weight loss counseling, please consider scheduling an intensive behavioral counseling session for weight loss.",
+                    "supporting_evidence": "The patient's records show an obesity classification with a BMI of 30, but there is no documentation of any weight loss counseling or behavioral interventions specifically addressing weight loss.",
+                    "user_input_questions": [
+                        "Have you attended any weight loss counseling sessions or received behavioral advice for weight loss recently?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Immunizations",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Receive the shingles vaccine.",
+                        "importance": "High",
+                        "recommendation_reason": "Recommended for adults aged 50 and older to reduce the risk of shingles.",
+                        "benefit": "Vaccination reduces the risk of shingles and its severe complications.",
+                        "impact_of_not_doing": "Not being vaccinated increases the risk of shingles, which can result in severe pain and complications.",
+                        "frequency": "Once",
+                        "source": "MedlinePlus",
+                        "recommendation_short_str": "Shingles vaccine",
+                        "frequency_short_str": "Once"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The immunizations section of the patient data shows that the patient received the 'zoster vaccine, live' on 2025-03-01 and on 2024-02-24, which supports that the shingles vaccine recommendation has been completed.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Receive annual influenza vaccination and stay updated on COVID-19 vaccines.",
+                        "importance": "High",
+                        "recommendation_reason": "As an adult, annual flu vaccination and current COVID-19 vaccines are key to preventing severe respiratory illness.",
+                        "benefit": "These vaccinations reduce the risk of infection and severe illness.",
+                        "impact_of_not_doing": "Failure to vaccinate may increase the risk of severe complications from influenza and COVID-19.",
+                        "frequency": "Annually for influenza; as recommended for COVID-19",
+                        "source": "MedlinePlus / CDC",
+                        "recommendation_short_str": "Flu & COVID-19 vaccines",
+                        "frequency_short_str": "Annually/as rec'd"
+                    },
+                    "status": "Partially completed",
+                    "next_step_recommendation": "The patient should receive an updated COVID-19 vaccination if they have not done so recently.",
+                    "supporting_evidence": "The patient's immunization records show a recent influenza vaccination on 2025-03-01, which meets the annual influenza vaccine requirement. However, the COVID-19 vaccines were last recorded in 2021, suggesting that the patient may not be up-to-date with current COVID-19 vaccination recommendations.",
+                    "user_input_questions": [
+                        "Have you received any COVID-19 vaccine doses or boosters since 2021?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Receive a Tdap booster every 10 years.",
+                        "importance": "High",
+                        "recommendation_reason": "Maintains immunity against tetanus, diphtheria, and pertussis in adults.",
+                        "benefit": "Prevents potentially serious infections.",
+                        "impact_of_not_doing": "Missing the booster may result in reduced immunity and increased infection risk.",
+                        "frequency": "Every 10 years",
+                        "source": "CDC",
+                        "recommendation_short_str": "Tdap booster",
+                        "frequency_short_str": "Every 10 yrs"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm if the immunization administered on 2025-03-01 was a Tdap booster (which includes pertussis protection) rather than a Td booster. If it was not a Tdap booster, schedule a Tdap booster.",
+                    "supporting_evidence": "The patient's immunization record on 2025-03-01 shows administration of a 'Td (adult)' vaccine. Unlike Tdap, the Td vaccine does not include the pertussis component, which is essential to meet the recommendation.",
+                    "user_input_questions": [
+                        "Did you receive a Tdap booster (the injection that includes pertussis protection) instead of a Td booster on 2025-03-01?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Mental Health",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Undergo regular screening for anxiety disorders.",
+                        "importance": "High",
+                        "recommendation_reason": "With a history of severe anxiety, regular screening helps in early identification and management.",
+                        "benefit": "Early intervention can improve mental health stability and quality of life.",
+                        "impact_of_not_doing": "Unmanaged anxiety may worsen, affecting daily functioning and overall well-being.",
+                        "frequency": "As recommended by healthcare provider",
+                        "source": "USPSTF / Women's Preventive Services Initiative",
+                        "recommendation_short_str": "Anxiety screening",
+                        "frequency_short_str": "As needed"
+                    },
+                    "status": "Not started",
+                    "next_step_recommendation": "Recommend that the patient undergo an updated anxiety screening to ensure current evaluation of their condition.",
+                    "supporting_evidence": "The patient’s record shows an 'Assessment of anxiety' procedure along with a GAD-7 score of 19.0 dated 2022-03-26, which indicates that screening was performed in the past. However, no more recent screening data is available to confirm if regular screening is being maintained.",
+                    "user_input_questions": [
+                        "Have you had an anxiety screening since March 2022?",
+                        "Have you undergone an anxiety screening within the past year as recommended by your healthcare provider?"
+                    ]
+                }
+            ]
+        }
+    ],
+    "assessment_date": "2025-05-17 20:17:09"
+}

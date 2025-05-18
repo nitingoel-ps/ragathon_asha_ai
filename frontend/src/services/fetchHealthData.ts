@@ -1,5 +1,5 @@
 import type { HealthRecommendations } from '../types/HealthRecommendations';
-import jsonData from '../data/kassandra_final_output.json';
+import jsonData from '../data/lisa_fake_data.json';
 
 const API_URL = 'https://naturally-mint-fly.ngrok-free.app'; // Replace with your actual API URL
 
