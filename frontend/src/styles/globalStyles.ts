@@ -12,10 +12,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${(props) => props.theme.typography.fontFamily.primary};
     font-size: ${(props) => props.theme.typography.fontSize.base};
     color: ${(props) => props.theme.colors.text.primary};
-    background-color: ${(props) => props.theme.colors.background};
+    background-color: ${(props) => props.theme.colors.backgroundSecondary};
     line-height: ${(props) => props.theme.typography.lineHeight.base};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
+  }
+
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 100vh;
   }
   
   a {

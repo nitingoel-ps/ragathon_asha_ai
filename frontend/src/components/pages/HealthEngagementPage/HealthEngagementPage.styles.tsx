@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledHealthEngagementPage = styled.div`
+    /* constrain to mobile sizing */
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    background-color: ${(props) => props.theme.colors.background};
+    max-height: 900px;
+    
+    overflow-y: scroll;
     .mainContent{
         padding-inline: 15px;
         padding-top: 60px;
@@ -23,17 +32,22 @@ export const StyledHealthEngagementPage = styled.div`
         }
     }
     .fullWidthImage {
-        width: 100vw;
+
+     
     }
     .fullWidthImage{
+        max-width: 400px;
+        width: 100%;
+        //left: 50%;
+        //transform: translateX(-50%);
         z-index: ${(props) => props.theme.zIndex.sticky};
-        position: fixed;
-        left: 0;
+        position: sticky;
         &#header{
             top: 0;
         }
         &#footer{
             bottom: 0;
+            
         }
     }
 `

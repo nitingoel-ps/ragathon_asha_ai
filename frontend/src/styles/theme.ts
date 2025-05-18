@@ -13,6 +13,7 @@ const theme = {
     ],
     error: '#b00020',
     background: '#ffffff',
+    backgroundSecondary: '#F0F0F0',
     surface: '#EBEBEB',
     text: {
       primary: '#000000',
