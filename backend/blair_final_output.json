@@ -56,25 +56,6 @@
                         "Have you already undergone any colorectal cancer screening procedure such as a colonoscopy, FIT, or sigmoidoscopy?",
                         "Are you planning to schedule colorectal cancer screening when you turn 45?"
                     ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Get screened for HIV as per current guidelines to ensure early detection and treatment.",
-                        "importance": "High",
-                        "recommendation_reason": "As a sexually active male, regular HIV screening is important for early detection and management.",
-                        "benefit": "Early treatment initiation can greatly improve health outcomes and reduce transmission risk.",
-                        "impact_of_not_doing": "Delayed HIV diagnosis can lead to advanced disease progression and increased health complications.",
-                        "frequency": "Screening at regular intervals based on risk factors",
-                        "source": "USPSTF",
-                        "recommendation_short_str": "HIV screening",
-                        "frequency_short_str": "Regularly"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient if they have received an HIV screening test as per current guidelines.",
-                    "supporting_evidence": "The patient record does not show any procedure, lab test, or specific documentation indicating that an HIV screening test was performed.",
-                    "user_input_questions": [
-                        "Have you been tested for HIV in the past year?"
-                    ]
                 }
             ]
         },
@@ -218,7 +199,7 @@
                     "status": "Partially completed",
                     "next_step_recommendation": "Obtain the full panel for kidney function assessment including urine albumin and eGFR calculation, in addition to serum creatinine, to complete the evaluation.",
                     "supporting_evidence": "The patient's 2024-07-01 basic metabolic panel includes a serum creatinine result (1.4 mg/dL), which is part of the kidney function assessment. However, there is no record of a urine albumin test or explicit eGFR value, which are required for the complete assessment.",
-                    "user_input_questions": []
+                    "user_input_questions": ["Have gotten a comprehensive kidney function assessment within the last 12 months?"]
                 },
                 {
                     "activity": {
