@@ -1,0 +1,290 @@
+{
+    "categories": [
+        {
+            "category_name": "Screenings",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Check blood pressure at least once every year.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient is an overweight Asian Indian male at higher risk for hypertension and cardiovascular disease.",
+                        "benefit": "Early detection of high blood pressure reduces risks of stroke, heart attack, and kidney disease.",
+                        "impact_of_not_doing": "Undetected hypertension may lead to long-term organ damage and serious cardiovascular events.",
+                        "frequency": "Once per year.",
+                        "source": "USPSTF Adult Blood Pressure Screening 2021; American Heart Association.",
+                        "recommendation_short_str": "Annual BP check",
+                        "frequency_short_str": "1x/year"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's recent record from February 5, 2025 shows a blood pressure measurement of 100/64 mmHg. Additional encounters from previous years also include blood pressure readings. This supports that the annual blood pressure check recommendation has been met.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Screen for type 2 diabetes and prediabetes with fasting plasma glucose or HbA1c.",
+                        "importance": "High",
+                        "recommendation_reason": "Asian Indians have a higher risk for type 2 diabetes even at lower BMIs, and overweight status increases this risk.",
+                        "benefit": "Early detection allows for timely lifestyle interventions to prevent or delay diabetes.",
+                        "impact_of_not_doing": "Missed diagnosis of dysglycemia may lead to complications such as kidney failure, vision loss, and heart disease.",
+                        "frequency": "Every 3 years if normal; more frequently if abnormal.",
+                        "source": "USPSTF Recommendation on Diabetes Screening 2021; ADA Guidelines.",
+                        "recommendation_short_str": "Diabetes screening",
+                        "frequency_short_str": "Every 3 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "On 2025-02-05, during a fasting laboratory encounter, the patient had a Hemoglobin A1c test (5.6%) and a fasting plasma glucose measurement (97 mg/dL), both used for diabetes screening. These results indicate that the diabetes screening recommendation was completed within the prescribed timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Lipid panel screening for cholesterol levels.",
+                        "importance": "High",
+                        "recommendation_reason": "Overweight South Asian males are at risk for dyslipidemia and related cardiovascular conditions.",
+                        "benefit": "Timely detection and management of abnormal lipids can reduce the risk of heart disease and stroke.",
+                        "impact_of_not_doing": "Unrecognized dyslipidemia may increase the likelihood of serious cardiovascular events.",
+                        "frequency": "Every 4-6 years if normal; more often if risk factors persist.",
+                        "source": "ACC/AHA 2018 Cholesterol Guidelines.",
+                        "recommendation_short_str": "Lipid panel screening",
+                        "frequency_short_str": "Every 4-6 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's records from the February 5, 2025 laboratory visit include a lipid panel with results showing total cholesterol at 245 mg/dL, LDL at 154 mg/dL, and triglycerides at 214 mg/dL. This confirms that the lipid panel screening was performed within the relevant timeframe.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Colorectal cancer screening via colonoscopy or FIT.",
+                        "importance": "High",
+                        "recommendation_reason": "At age 47, the patient fits the criteria for initiating colorectal cancer screening as per updated guidelines.",
+                        "benefit": "Early detection and removal of precancerous polyps significantly reduce colorectal cancer mortality.",
+                        "impact_of_not_doing": "Undetected cancer can progress to advanced stages, reducing treatment efficacy.",
+                        "frequency": "Colonoscopy every 10 years or FIT annually, based on chosen method.",
+                        "source": "USPSTF Colorectal Cancer Screening 2021.",
+                        "recommendation_short_str": "Colorectal screening",
+                        "frequency_short_str": "Method based"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you have completed your colorectal cancer screening (via FIT or colonoscopy) as ordered. If not, schedule and complete the test at your earliest convenience.",
+                    "supporting_evidence": "The patient’s records indicate that during the office visits on 2025-02-05 and 2023-08-31, a colorectal cancer screening (stool test/FIT) was discussed and ordered, but there is no documentation of the test result or confirmation of its completion.",
+                    "user_input_questions": [
+                        "Have you completed the colorectal cancer screening test (either FIT or colonoscopy) as recommended?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Conduct regular HIV screening due to sexual activity.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient's sexual activity places him at potential risk for HIV infection.",
+                        "benefit": "Early detection of HIV enables timely treatment and reduces the risk of transmission.",
+                        "impact_of_not_doing": "Delayed diagnosis may lead to immune system deterioration and increased risk of opportunistic infections.",
+                        "frequency": "As recommended by your healthcare provider.",
+                        "source": "USPSTF.",
+                        "recommendation_short_str": "HIV screening",
+                        "frequency_short_str": "As advised"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not had an HIV screening recently, please schedule an HIV test as recommended by your healthcare provider.",
+                    "supporting_evidence": "The patient’s health data, including lab results and encounter summaries, do not include any documentation of an HIV screening test or related HIV diagnostic workup.",
+                    "user_input_questions": [
+                        "Have you undergone an HIV screening test in the past 12 months?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Immunizations",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Receive influenza vaccine annually.",
+                        "importance": "High",
+                        "recommendation_reason": "Annual flu vaccination is recommended for all adults to reduce the risk of severe influenza.",
+                        "benefit": "Reduces the risk of serious flu illness, hospitalization, and complications.",
+                        "impact_of_not_doing": "Increased susceptibility to severe flu, leading to potential hospitalization and further spread.",
+                        "frequency": "Every year, preferably before the flu season begins.",
+                        "source": "CDC Adult Immunization Schedule 2024.",
+                        "recommendation_short_str": "Annual flu vaccine",
+                        "frequency_short_str": "Every year"
+                    },
+                    "status": "Partially completed",
+                    "next_step_recommendation": "Since the annual influenza vaccine is recommended and the last documented vaccination was on October 12, 2023, the patient should receive a new influenza vaccine if not already done for the current flu season.",
+                    "supporting_evidence": "The patient's immunization history shows an influenza vaccine given on 2023-10-12. With the current date being May 17, 2025, this record indicates that the most recent influenza vaccination is outdated for an annual vaccine schedule.",
+                    "user_input_questions": [
+                        "Have you received an influenza vaccine since October 2023?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Stay up to date with Tdap booster every 10 years.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Maintaining Tdap vaccination is advised to protect against tetanus, diphtheria, and pertussis.",
+                        "benefit": "Prevents serious vaccine-preventable infections.",
+                        "impact_of_not_doing": "Risk of contracting tetanus, diphtheria, or pertussis increases over time.",
+                        "frequency": "Once every 10 years.",
+                        "source": "CDC Adult Immunization Schedule 2024.",
+                        "recommendation_short_str": "Tdap booster",
+                        "frequency_short_str": "Every 10 yrs"
+                    },
+                    "status": "Completed",
+                    "next_step_recommendation": null,
+                    "supporting_evidence": "The patient's immunization history includes a record of a Tdap (ADACEL) vaccination administered on 2023-10-12, which fulfills the recommendation to stay up to date with a Tdap booster every 10 years.",
+                    "user_input_questions": null
+                },
+                {
+                    "activity": {
+                        "recommendation": "Update COVID-19 vaccination as per current CDC guidelines.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Staying current with COVID-19 vaccines is recommended for maintaining protection against severe disease.",
+                        "benefit": "Reduces the risk of severe COVID-19 illness, hospitalization, and potential long-term complications.",
+                        "impact_of_not_doing": "Increased vulnerability to severe infection, especially with emerging variants.",
+                        "frequency": "Annually or as directed by CDC.",
+                        "source": "CDC COVID-19 Vaccine Recommendations 2024.",
+                        "recommendation_short_str": "COVID-19 vaccine update",
+                        "frequency_short_str": "As CDC advises"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Recommend scheduling an updated COVID-19 booster as per the current CDC guidelines.",
+                    "supporting_evidence": "The immunization history shows the Pfizer 12+ Bivalent COVID-19 Vaccine was administered on 2023-01-28, with no later COVID-19 vaccination record. Given that CDC now recommends annual updates, this record suggests the update may be overdue.",
+                    "user_input_questions": [
+                        "Have you received any COVID-19 booster or updated vaccine dose since January 2024?",
+                        "Do you plan to get your COVID-19 vaccination updated according to the current CDC guidelines?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Diet & Weight",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Adopt a Mediterranean or DASH diet rich in fruits, vegetables, whole grains, and healthy fats like olive oil and nuts.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient has high cholesterol and triglyceride levels, warranting dietary changes to improve lipid profiles.",
+                        "benefit": "Helps lower LDL cholesterol and supports cardiovascular health.",
+                        "impact_of_not_doing": "Continuing current dietary habits may worsen lipid profiles and increase cardiovascular risk.",
+                        "frequency": "Daily adherence.",
+                        "source": "Nutritional Therapy for Asian Patients at Risk - PMC",
+                        "recommendation_short_str": "Adopt Mediterranean/DASH diet",
+                        "frequency_short_str": "Daily"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient directly about their dietary practices and if they have been consistently following a Mediterranean or DASH diet. If not, provide additional guidance and support to help implement these changes.",
+                    "supporting_evidence": "The patient's data shows that dietary counseling and education were provided during recent office visits (for instance, on 2025-02-05) emphasizing healthy eating habits that align with a low-fat, whole grain, fruits and vegetables approach. However, the persistently elevated lipid profile (total cholesterol, LDL, and triglyceride levels) suggests that there is no clear documentation of successful dietary change, thus raising uncertainty about adherence.",
+                    "user_input_questions": [
+                        "Have you been following a Mediterranean or DASH diet daily as recommended?",
+                        "Since your last visit, have you made noticeable changes in your eating habits to include more fruits, vegetables, whole grains, and healthy fats?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Limit intake of saturated fats by avoiding fried foods, red meats, and full-fat dairy products.",
+                        "importance": "High",
+                        "recommendation_reason": "High saturated fat consumption contributes to elevated LDL cholesterol levels.",
+                        "benefit": "Reducing saturated fat intake can lower cholesterol and decrease heart disease risk.",
+                        "impact_of_not_doing": "Ongoing high intake may exacerbate cholesterol issues and increase cardiovascular risk.",
+                        "frequency": "Consistently, with every meal.",
+                        "source": "Indian Heart Association",
+                        "recommendation_short_str": "Limit saturated fats",
+                        "frequency_short_str": "Consistently"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient if they have consistently changed their eating habits to limit saturated fats. Consider providing additional dietary guidance if needed.",
+                    "supporting_evidence": "The patient's lipid profile from the 2025-02-05 encounter shows a high total cholesterol (245 mg/dL), high LDL (154 mg/dL), and elevated triglycerides (214 mg/dL). Despite prior counseling on dietary changes, these values do not clearly indicate that limiting fried foods, red meats, and full-fat dairy products has been consistently implemented.",
+                    "user_input_questions": [
+                        "Have you consistently avoided fried foods, red meats, and full-fat dairy products with every meal?",
+                        "Since receiving dietary counseling, have you made any changes in your diet to lower saturated fat intake?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Replace white rice and bread with whole grains like brown rice, quinoa, and whole-wheat products.",
+                        "importance": "High",
+                        "recommendation_reason": "Refined carbohydrates can elevate triglyceride levels, which are already high.",
+                        "benefit": "Whole grains help manage blood sugar and lipid levels by offering a lower glycemic index.",
+                        "impact_of_not_doing": "Continued consumption of refined carbs may worsen lipid profile and increase diabetes risk.",
+                        "frequency": "Daily substitution.",
+                        "source": "Indian Heart Association",
+                        "recommendation_short_str": "Choose whole grains",
+                        "frequency_short_str": "Daily"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient whether they have started substituting white rice and bread with whole grains as recommended, since the dietary counseling suggests this change but the lab findings (elevated triglycerides) do not clearly indicate full adherence.",
+                    "supporting_evidence": "The patient received dietary counseling during the 2025-02-05 visit that emphasized a low‐fat diet rich in whole grains, fruits, and vegetables. However, recent labs (e.g., triglycerides of 214 mg/dL on 2025-02-05) remain high, suggesting that the recommended substitution may not have been fully implemented.",
+                    "user_input_questions": [
+                        "Have you been regularly replacing white rice and bread with whole grain options like brown rice or quinoa?",
+                        "Have you noticed any changes in your diet that align with the recommendation to choose whole grains daily?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Increase soluble fiber intake through foods like oats, fruits, and vegetables.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Soluble fiber can help lower LDL cholesterol levels.",
+                        "benefit": "Improves cholesterol levels and supports digestive health.",
+                        "impact_of_not_doing": "Missing out on sufficient fiber may result in persistently high LDL levels.",
+                        "frequency": "Include in daily meals.",
+                        "source": "Indian Heart Association",
+                        "recommendation_short_str": "More soluble fiber",
+                        "frequency_short_str": "Daily"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient to confirm if they have made changes to increase their intake of soluble fiber through foods such as oats, fruits, and vegetables, and consider reinforcing dietary counseling if not.",
+                    "supporting_evidence": "Recent lipid profile results from the 2025-02-05 encounter indicate persistently high LDL cholesterol (154 mg/dL) and total cholesterol (245 mg/dL), which may suggest that increased soluble fiber intake has not yet been achieved.",
+                    "user_input_questions": [
+                        "Since your last visit, have you increased your intake of high soluble fiber foods like oats, fruits, and vegetables?",
+                        "Have you made any changes to your diet in line with your healthcare provider's recommendations to lower cholesterol?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Aim for gradual weight loss to achieve a BMI within the normal range (18.5–24.9 kg/m²).",
+                        "importance": "High",
+                        "recommendation_reason": "The patient’s current BMI of 28.82 kg/m² indicates overweight status, increasing cardiometabolic risk.",
+                        "benefit": "Achieving a normal BMI can improve lipid profiles, reduce blood pressure, and lower diabetes risk.",
+                        "impact_of_not_doing": "Remaining overweight sustains elevated risk for cardiovascular and metabolic diseases.",
+                        "frequency": "Ongoing until the target BMI is achieved.",
+                        "source": "PMC Management of Obesity in Adult Asian Indians",
+                        "recommendation_short_str": "Gradual weight loss",
+                        "frequency_short_str": "Ongoing"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm whether you have started or sustained lifestyle changes such as a targeted diet or exercise plan, since your BMI remains elevated and there is no clear evidence of weight loss.",
+                    "supporting_evidence": "Recent BMI measurements (28.82 kg/m² on 2025-02-05, and previous values in the overweight range) coupled with documented counseling sessions indicate that while weight loss strategies were discussed, there is no objective evidence of successful weight reduction.",
+                    "user_input_questions": [
+                        "Have you actively started any dietary changes to achieve gradual weight loss?",
+                        "Have you implemented or maintained a regular exercise routine aimed at reducing your weight?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Exercise",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Engage in at least 150 minutes of moderate-intensity aerobic exercise per week plus muscle-strengthening activities on 2 or more days.",
+                        "importance": "High",
+                        "recommendation_reason": "Regular physical activity is essential for weight management and improving cardiovascular health, especially given the patient's overweight status and dyslipidemia.",
+                        "benefit": "Helps reduce weight, improve lipid profiles, and enhance overall fitness and cardiovascular function.",
+                        "impact_of_not_doing": "Lack of regular exercise may lead to further weight gain, worsening lipid levels, and increased cardiovascular risk.",
+                        "frequency": "150 minutes per week with at least 2 days dedicated to strength training.",
+                        "source": "Physical Activity Guidelines for Americans.",
+                        "recommendation_short_str": "150 min aerobic + strength",
+                        "frequency_short_str": "150 min/wk + 2 days"
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient to confirm whether they engaged in the recommended exercise regimen over the past week.",
+                    "supporting_evidence": "While the 2025-02-05 visit note includes counseling on exercising at least 150 minutes per week along with strength training on 2 or more days, the patient data does not provide direct evidence (e.g., exercise logs or activity tracking) that confirms adherence to this recommendation.",
+                    "user_input_questions": [
+                        "Have you completed at least 150 minutes of moderate-intensity aerobic exercise in the past week?",
+                        "Have you performed muscle-strengthening activities on 2 or more days in the past week?"
+                    ]
+                }
+            ]
+        }
+    ],
+    "assessment_date": "2025-05-17 18:52:16"
+}

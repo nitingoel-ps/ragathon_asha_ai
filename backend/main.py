@@ -27,8 +27,8 @@ async def main():
     result = await healthcare_agent.review_patient()
     
     # Print results
-    #print("Final Output:")
-    #print(result["final_output"])
+    print("Final Output:")
+    print(result["final_output"])
     #print("\nMessage History:")
     #print(result["message_history"])
 
