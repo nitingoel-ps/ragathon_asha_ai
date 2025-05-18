@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { fetchHealthData } from '../services/fetchHealthData';
 import type { HealthRecommendations, Category, ActivityItem } from '../types/HealthRecommendations';
+import Header from './Header';
+import Footer from './Footer';
 
 function HealthEngagementPage() {
 
@@ -19,6 +21,7 @@ function HealthEngagementPage() {
 
     return (
         <div>
+            <Header />
             <div className="scoreCard">
                 <ScoreDial />
                 <h1>Health Engagement Page</h1>
@@ -32,8 +35,7 @@ function HealthEngagementPage() {
                     />
                 ))}
             </div>
-
-
+            <Footer />
         </div>
     );
 }
@@ -80,5 +82,9 @@ function LoadingPlaceholder() {
         <p>Loading...</p>
     )
 }
+
+
+
+
 
 export default HealthEngagementPage;
