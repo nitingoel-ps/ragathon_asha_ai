@@ -3,6 +3,9 @@ import nest_asyncio
 import json
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, Response
+=======
+from fastapi import FastAPI
+>>>>>>> main
 from fastapi.middleware.cors import CORSMiddleware
 from agents import Runner, function_tool, WebSearchTool, Agent
 from datetime import datetime
