@@ -3,6 +3,7 @@ import nest_asyncio
 import json
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from agents import Runner, function_tool, WebSearchTool, Agent
 from datetime import datetime
 from pydantic import BaseModel, Field
@@ -464,6 +465,16 @@ class HealthCareAgent:
 
 # Initialize FastAPI app
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 healthcare_agent = None
 
 @app.on_event("startup")
