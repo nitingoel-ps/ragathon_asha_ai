@@ -143,7 +143,9 @@ class HealthCareAgent:
         """Get patient information."""
         print("Tool Call: Get Detailed Patient data.")
         patient_file_dir = "/Users/nitingoel/AI/experiments/Health Datasets/Synthea/synthea/output/text"
-        patient_file_name = "Blair400_Bernier607_1b89bede-f50a-fa66-1a2c-b126a249bc81.txt"
+        #patient_file_name = "Blair400_Bernier607_1b89bede-f50a-fa66-1a2c-b126a249bc81.txt"
+        patient_file_name = "Kassandra256_Francie486_Sawayn19_ad2aa304-bf4a-c2c5-a8ff-2c217f2ea1f5.txt"
+        #patient_file_name = "nitin_goel.txt"
         patient_file_path = os.path.join(patient_file_dir, patient_file_name)
         with open(patient_file_path, "r") as f:
             patient_info = f.read()
