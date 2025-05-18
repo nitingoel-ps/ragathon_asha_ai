@@ -5,6 +5,9 @@ const StyledCategoryListItem = styled.div`
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+        p {
+            color: ${(props) => props.theme.colors.text.tertiary};
+        }
     }
 `
 
