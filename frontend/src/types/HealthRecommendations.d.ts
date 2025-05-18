@@ -13,7 +13,7 @@ export interface Activity {
 
 export interface ActivityItem {
   activity: Activity;
-  status: 'Completed' | 'Needs user confirmation';
+  status: 'Completed' | 'Needs user confirmation' | 'Partial' | 'Not started';
   next_step_recommendation: string | null;
   supporting_evidence: string;
   user_input_questions: string[] | null;

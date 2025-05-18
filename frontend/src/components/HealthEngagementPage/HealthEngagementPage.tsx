@@ -8,10 +8,12 @@ import Box from '@mui/material/Box';
 // Internal Dependencies
 // Services
 import { fetchHealthData } from '../../services/fetchHealthData';
+// Utilities
+import calculateProgress from './calculateProgress';
 // Types
 import type { HealthRecommendations, Category, ActivityItem } from '../../types/HealthRecommendations';
+import type { Progress, CategoryProgress } from '../../types/Progress';
 // Styles
-import theme from '../../styles/theme';
 import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
 // Components
 import Header from '../Header';
@@ -21,15 +23,19 @@ import Footer from '../Footer';
 function HealthEngagementPage() {
 
     const [data, setData] = useState<HealthRecommendations | null>(null);
+    const [progress, setProgress] = useState<Progress>({ overallProgress: 0, categoryProgress: {} } as Progress);
 
     useEffect(() => {
         const loadData = async () => {
             const healthData = await fetchHealthData();
             setData(healthData);
+            setProgress(calculateProgress(healthData));
         };
 
         loadData();
     }, []);
+
+
 
     if (!data) return <LoadingPlaceholder />;
 
@@ -38,7 +44,7 @@ function HealthEngagementPage() {
             <Header />
             <div className="mainContent">
                 <div className="scoreCard">
-                    <ScoreDial score={70} />
+                    <ScoreDial score={progress.overallProgress} />
                     <div className="introText">
                         <h1><span className="highlight">Lisa's</span> Health Engagement Score</h1>
                         <p>Shows how you are tracking against established guidelines for health</p>
@@ -66,7 +72,7 @@ function ScoreDial({ score }: { score: number }) {
     )
 }
 
-function CircularProgressWithLabel(props) {
+function CircularProgressWithLabel({ value }: { value: number }) {
     return (
         <Box className="circularProgressWithLabel" sx={{ position: 'relative', display: 'inline-flex' }}>
             <CircularProgress
@@ -79,7 +85,7 @@ function CircularProgressWithLabel(props) {
                     left: 0
                 }}
             />
-            <CircularProgress className='progressForeground' variant="determinate" {...props} />
+            <CircularProgress className='progressForeground' variant="determinate" value={value} />
             <Box
                 sx={{
                     top: 0,
@@ -95,7 +101,7 @@ function CircularProgressWithLabel(props) {
             >
                 <Typography className="progressText"
                     component="div"
-                >{`${Math.round(props.value)}`}</Typography>
+                >{`${Math.round(value)}`}</Typography>
             </Box>
         </Box >
     );
