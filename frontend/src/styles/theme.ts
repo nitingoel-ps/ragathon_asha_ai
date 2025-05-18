@@ -1,16 +1,22 @@
 const theme = {
   // Colors
   colors: {
-    primary: '#6200ee',
-    secondary: '#03dac6',
+    primary: '#08ABA6',
+    secondary: '#cdf5ef',
+    categories: {
+      turquoise: '#0885AB',
+      green: '#08AB7B',
+      purple: '#AB0885',
+      red: '#b00020',
+      yellow: '#AB8B08',
+      blue: '#0824AB',
+    },
     error: '#b00020',
     background: '#ffffff',
-    surface: '#f5f5f5',
+    surface: '#EBEBEB',
     text: {
-      primary: '#333333',
-      secondary: '#757575',
-      disabled: '#9e9e9e',
-      hint: '#9e9e9e',
+      primary: '#000000',
+      secondary: '#08ABA6',
     },
   },
 
@@ -26,8 +32,8 @@ const theme = {
       base: '1rem', // 16px
       lg: '1.125rem', // 18px
       xl: '1.25rem', // 20px
-      '2xl': '1.5rem', // 24px
-      '3xl': '1.875rem', // 30px
+      '2xl': '1.2rem', // 24px
+      '3xl': '1.25rem', // 30px
       '4xl': '2.25rem', // 36px
       '5xl': '3rem', // 48px
     },
@@ -95,6 +101,29 @@ const theme = {
     normal: '300ms',
     slow: '500ms',
   },
+};
+
+// Convert the theme to Ant Design's token format
+export const antThemeTokens = {
+  colorPrimary: theme.colors.primary,
+  colorSuccess: theme.colors.secondary,
+  borderRadius: parseInt(theme.borderRadius.md),
+  colorBgContainer: theme.colors.background,
+  colorText: theme.colors.text,
+  colorTextSecondary: theme.colors.text.secondary,
+  colorBorder: theme.colors.surface,
+  marginXS: parseInt(theme.spacing.xs),
+  marginSM: parseInt(theme.spacing.sm),
+  margin: parseInt(theme.spacing.md),
+  marginMD: parseInt(theme.spacing.lg),
+  marginLG: parseInt(theme.spacing.xl),
+  marginXL: parseInt(theme.spacing['2xl']),
+  boxShadow: theme.shadows.sm,
+  fontSizeXS: parseInt(theme.typography.fontSize.xs),
+  fontSizeSM: parseInt(theme.typography.fontSize.sm),
+  fontSize: parseInt(theme.typography.fontSize.base),
+  fontSizeLG: parseInt(theme.typography.fontSize.lg),
+  fontSizeXL: parseInt(theme.typography.fontSize.xl),
 };
 
 export default theme;

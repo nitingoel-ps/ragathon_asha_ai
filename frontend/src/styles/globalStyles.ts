@@ -44,23 +44,23 @@ const GlobalStyles = createGlobalStyle`
   }
   
   h1 {
-    font-size: ${(props) => props.theme.typography.fontSize['4xl']};
-  }
-  
-  h2 {
     font-size: ${(props) => props.theme.typography.fontSize['3xl']};
   }
   
-  h3 {
+  h2 {
     font-size: ${(props) => props.theme.typography.fontSize['2xl']};
   }
   
-  h4 {
+  h3 {
     font-size: ${(props) => props.theme.typography.fontSize.xl};
   }
   
-  h5 {
+  h4 {
     font-size: ${(props) => props.theme.typography.fontSize.lg};
+  }
+  
+  h5 {
+    font-size: ${(props) => props.theme.typography.fontSize.base};
   }
   
   h6 {
@@ -68,6 +68,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   p {
+    font-size: ${(props) => props.theme.typography.fontSize.base};
     margin-bottom: ${(props) => props.theme.spacing.md};
   }
 `;
