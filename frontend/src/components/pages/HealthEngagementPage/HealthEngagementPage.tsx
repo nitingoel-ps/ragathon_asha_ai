@@ -8,8 +8,9 @@ import { fetchHealthData } from '../../../services/fetchHealthData';
 import calculateProgress from './calculateProgress';
 // Types
 import type { HealthRecommendations } from '../../../types/HealthRecommendations';
-import type { Progress, CategoryProgress } from '../../../types/Progress';
+import type { Progress } from '../../../types/Progress';
 // Styles
+import theme from '../../../styles/theme';
 import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
 // Components
 import Header from '../../layout/Header';
@@ -49,11 +50,12 @@ function HealthEngagementPage() {
                     </div>
                 </div>
                 <div className="categoryList">
-                    {data.categories.map((category) => (
+                    {data.categories.map((category, i) => (
                         <CategoryListItem
                             key={category.category_name}
                             categoryData={category}
                             categoryProgress={progress.categoryProgress[category.category_name]}
+                            color={theme.colors.categories[i % theme.colors.categories.length]}
                         />
                     ))}
                 </div>

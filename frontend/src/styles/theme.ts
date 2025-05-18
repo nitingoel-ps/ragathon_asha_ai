@@ -3,14 +3,14 @@ const theme = {
   colors: {
     primary: '#08ABA6',
     secondary: '#cdf5ef',
-    categories: {
-      turquoise: '#0885AB',
-      green: '#08AB7B',
-      purple: '#AB0885',
-      red: '#b00020',
-      yellow: '#AB8B08',
-      blue: '#0824AB',
-    },
+    categories: [
+      '#0885AB',
+      '#08AB7B',
+      '#AB0885',
+      '#b00020',
+      '#AB8B08',
+      '#0824AB',
+    ],
     error: '#b00020',
     background: '#ffffff',
     surface: '#EBEBEB',
