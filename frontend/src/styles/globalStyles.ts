@@ -48,11 +48,14 @@ const GlobalStyles = createGlobalStyle`
   }
   
   h2 {
-    font-size: ${(props) => props.theme.typography.fontSize['2xl']};
+    font-size: ${(props) => props.theme.typography.fontSize['4xl']};
+    font-weight: ${(props) => props.theme.typography.fontWeight.medium};
   }
   
   h3 {
     font-size: ${(props) => props.theme.typography.fontSize.xl};
+    font-weight: ${(props) => props.theme.typography.fontWeight.medium};
+    
   }
   
   h4 {

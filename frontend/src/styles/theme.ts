@@ -34,7 +34,7 @@ const theme = {
       xl: '1.25rem', // 20px
       '2xl': '1.2rem', // 24px
       '3xl': '1.25rem', // 30px
-      '4xl': '2.25rem', // 36px
+      '4xl': '1.6rem', // 36px
       '5xl': '2.7rem', // 48px
     },
     fontWeight: {

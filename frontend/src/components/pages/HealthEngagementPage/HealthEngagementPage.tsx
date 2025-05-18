@@ -7,7 +7,7 @@ import { fetchHealthData } from '../../../services/fetchHealthData';
 // Utilities
 import calculateProgress from './calculateProgress';
 // Types
-import type { HealthRecommendations, Category, ActivityItem } from '../../../types/HealthRecommendations';
+import type { HealthRecommendations } from '../../../types/HealthRecommendations';
 import type { Progress, CategoryProgress } from '../../../types/Progress';
 // Styles
 import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
@@ -15,6 +15,7 @@ import { StyledHealthEngagementPage } from './HealthEngagementPage.styles';
 import Header from '../../layout/Header';
 import Footer from '../../layout/Footer';
 import ScoreDial from '../../ui/ScoreDial/ScoreDial';
+import CategoryListItem from '../../ui/CategoryListItem/CategoryListItem';
 
 
 function HealthEngagementPage() {
@@ -52,6 +53,7 @@ function HealthEngagementPage() {
                         <CategoryListItem
                             key={category.category_name}
                             categoryData={category}
+                            categoryProgress={progress.categoryProgress[category.category_name]}
                         />
                     ))}
                 </div>
@@ -60,35 +62,7 @@ function HealthEngagementPage() {
         </StyledHealthEngagementPage>
     );
 }
-function CategoryListItem({ categoryData }: { categoryData: Category }) {
-    return (
-        <div className="categoryListItem">
-            <h2>{categoryData.category_name}</h2>
-            <p>Progress Bar here</p>
-            <div className="activityList">
-                {categoryData.activities.map((activityItem) => (
-                    <ActivityListItem
-                        key={activityItem.activity.recommendation_short_str}
-                        activityItem={activityItem}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
 
-
-function ActivityListItem({ activityItem }: { activityItem: ActivityItem }) {
-    return (
-        <div className="activityListItem">
-            <div className="activityTextContainer">
-                <h3>{activityItem.activity.recommendation_short_str}</h3>
-                <p>{activityItem.activity.frequency_short_str}</p>
-            </div>
-            <p>{activityItem.status}</p>
-        </div>
-    )
-}
 
 function LoadingPlaceholder() {
     return (
