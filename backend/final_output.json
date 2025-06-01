@@ -1,225 +1,299 @@
 {
     "categories": [
         {
+            "category_name": "Lifestyle & Metabolic",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Lose 7-10% body weight via calorie reduction and regular exercise.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient is at risk for prediabetes; weight loss can significantly reduce this risk.",
+                        "benefit": "Lowers the risk of developing type 2 diabetes and improves overall metabolic health.",
+                        "impact_of_not_doing": "Failure to lose weight may lead to progression to type 2 diabetes and associated complications.",
+                        "frequency": "Weekly weight tracking with monthly progress reviews until target weight is achieved.",
+                        "source": "American Diabetes Association 2023 Guidelines.",
+                        "recommendation_short_str": "Lose 7-10% weight.",
+                        "frequency_short_str": "Weekly tracking."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient to provide their recent weight measurements and confirm any dietary or exercise changes made to help lose weight.",
+                    "supporting_evidence": "The provided patient data includes extensive lab and diagnostic reports but no information about weight, body mass index, or weight tracking records that would indicate whether the patient has achieved weight loss.",
+                    "user_input_questions": [
+                        "Have you been tracking your weight on a weekly basis as recommended?",
+                        "Have you made any changes to your diet or exercise routine to support weight loss?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Adopt a fiber-rich, heart-healthy diet that includes whole grains, vegetables, lean proteins, and avoids sugary and high-saturated fat foods.",
+                        "importance": "High",
+                        "recommendation_reason": "Patient shows signs of prediabetes and elevated cholesterol, necessitating dietary change.",
+                        "benefit": "Helps regulate blood glucose and improves lipid profiles.",
+                        "impact_of_not_doing": "Poor dietary habits can worsen blood sugar control and increase cardiovascular risks.",
+                        "frequency": "Consume this diet with every meal, daily.",
+                        "source": "Mayo Clinic & AHA Guidelines.",
+                        "recommendation_short_str": "Healthy diet daily.",
+                        "frequency_short_str": "Daily."
+                    },
+                    "status": "Partially completed",
+                    "next_step_recommendation": "Ask the patient to confirm whether they have been consistently following a fiber-rich, heart-healthy diet and provide nutritional counseling if needed.",
+                    "supporting_evidence": "The patient's laboratory results show notable improvements over time: total cholesterol dropped from 273 mg/dL in 2020 to 149 mg/dL in 2024 and LDL cholesterol decreased from 188 mg/dL to 99 mg/dL. Additionally, there is modest improvement in glycemic control with HbA1c values trending lower. These changes are consistent with dietary modifications, although there is no direct data on the patient’s meal choices.",
+                    "user_input_questions": [
+                        "Have you been including whole grains, vegetables, and lean proteins in your meals every day?",
+                        "Have you reduced your intake of sugary and high-saturated fat foods as recommended?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Engage in 150 minutes of moderate aerobic exercise weekly plus 2 days of muscle-strengthening exercises.",
+                        "importance": "High",
+                        "recommendation_reason": "Regular exercise enhances insulin sensitivity and supports cardiovascular health.",
+                        "benefit": "Helps in weight management, improves heart health, and lowers diabetes risk.",
+                        "impact_of_not_doing": "Insufficient physical activity can lead to weight gain and worsen metabolic health.",
+                        "frequency": "150 minutes per week with strength training twice weekly.",
+                        "source": "CDC & AHA 2023 Guidelines.",
+                        "recommendation_short_str": "150 mins exercise weekly.",
+                        "frequency_short_str": "150 mins/week."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Please confirm if you completed 150 minutes of moderate aerobic exercise and performed muscle-strengthening exercises on at least 2 days in the past week.",
+                    "supporting_evidence": "The patient's health data mainly comprises lab reports and diagnostic images with no direct evidence of physical activity or exercise. There are no records or observations that indicate the duration or frequency of aerobic or muscle-strengthening exercises.",
+                    "user_input_questions": [
+                        "Have you engaged in at least 150 minutes of moderate aerobic exercise this week?",
+                        "Have you performed muscle-strengthening exercises on at least two days this week?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Perform daily balance exercises to reduce the risk of falls.",
+                        "importance": "Medium",
+                        "recommendation_reason": "At 74 years old, the patient is at an increased risk for falls.",
+                        "benefit": "Enhances stability and reduces the likelihood of injuries due to falls.",
+                        "impact_of_not_doing": "Neglecting balance training may increase fall risk and associated complications.",
+                        "frequency": "Engage in balance exercises every day.",
+                        "source": "CDC 2023; USPSTF Falls Prevention.",
+                        "recommendation_short_str": "Daily balance exercise.",
+                        "frequency_short_str": "Daily."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient if they have been performing the daily balance exercises as recommended.",
+                    "supporting_evidence": "The available patient data consists primarily of lab reports and does not contain any records or observational notes regarding physical activities or exercise routines that would indicate whether daily balance exercises have been performed.",
+                    "user_input_questions": [
+                        "Have you been doing your daily balance exercises as recommended?",
+                        "Did you perform any balance exercises on most days over the past week?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Cancer Care",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Undergo regular imaging (CT/MRI) of the abdomen and pelvis every 3–6 months for the first 3 years to monitor for metastatic GIST progression.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient has metastatic GIST, requiring close monitoring for disease progression.",
+                        "benefit": "Allows for timely intervention if progression or new metastases are detected.",
+                        "impact_of_not_doing": "Delayed imaging could result in late detection of progression, complicating treatment.",
+                        "frequency": "Every 3-6 months consistently for the next 3 years.",
+                        "source": "NCCN Guidelines, Cancer Care.",
+                        "recommendation_short_str": "CT/MRI every 3-6 months.",
+                        "frequency_short_str": "3–6 months."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "If you have not already received imaging, schedule a CT or MRI scan of your abdomen and pelvis to monitor for metastatic GIST progression.",
+                    "supporting_evidence": "The patient’s records include various lab panels and a PET CT scan from 2020; however, there is no recent documentation (within the past 3-6 months) of a dedicated CT or MRI scan of the abdomen and pelvis as recommended for metastatic GIST monitoring.",
+                    "user_input_questions": [
+                        "Have you had a CT scan of your abdomen and pelvis in the last 6 months?",
+                        "Have you had an MRI of your abdomen and pelvis in the last 6 months?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Take imatinib 400 mg daily and attend regular follow-ups to monitor side effects and adjust dosage if necessary.",
+                        "importance": "High",
+                        "recommendation_reason": "This is the frontline treatment for the patient’s metastatic GIST.",
+                        "benefit": "Ensures effective tumor control and improves survival outcomes.",
+                        "impact_of_not_doing": "Non-adherence may lead to disease progression and increased mortality risk.",
+                        "frequency": "Daily medication intake with follow-up assessments as scheduled.",
+                        "source": "ESMO and NCCN Guidelines, Oncology.",
+                        "recommendation_short_str": "Take imatinib daily.",
+                        "frequency_short_str": "Daily."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Ask the patient to confirm if they are taking imatinib 400 mg daily and attending their scheduled follow-ups.",
+                    "supporting_evidence": "The available health records do not include medication administration details or follow-up encounter notes that indicate ongoing imatinib use. Although lab values such as low hemoglobin were noted, they are not definitive evidence of imatinib intake.",
+                    "user_input_questions": [
+                        "Have you been taking imatinib 400 mg every day as prescribed?",
+                        "Have you been attending your regular follow-up appointments for monitoring as recommended?"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_name": "Anemia Care",
+            "activities": [
+                {
+                    "activity": {
+                        "recommendation": "Consume iron-rich foods paired with vitamin C at each meal to enhance iron absorption.",
+                        "importance": "High",
+                        "recommendation_reason": "The patient displays signs of mild anemia; dietary changes can boost iron absorption.",
+                        "benefit": "Improves hemoglobin levels and helps alleviate anemia symptoms.",
+                        "impact_of_not_doing": "Insufficient iron intake may worsen anemia and lead to fatigue.",
+                        "frequency": "With every meal, daily.",
+                        "source": "Healthline 2023 and American Society of Hematology 2023.",
+                        "recommendation_short_str": "Iron-rich foods with vitamin C.",
+                        "frequency_short_str": "Each meal."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm with the patient whether they have been intentionally incorporating iron-rich foods with vitamin C at every meal. If not, reinforce starting these dietary changes to help improve iron levels.",
+                    "supporting_evidence": "Recent lab reports (e.g., from 2024-04-07 and 2024-06-21) show low serum iron (42.00 µg/dL), low transferrin saturation (12.17%), and low hemoglobin (9.80 g/dL) which suggest that the expected improvements in iron status have not occurred.",
+                    "user_input_questions": [
+                        "Have you been consuming iron-rich foods paired with vitamin C at every meal as recommended?",
+                        "Have you made any recent changes to your diet to specifically increase your iron intake?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Start oral iron therapy (e.g., 325 mg ferrous sulfate) once daily, and monitor for tolerance.",
+                        "importance": "High",
+                        "recommendation_reason": "Supplementation is indicated to correct iron deficiency contributing to anemia.",
+                        "benefit": "Helps restore iron levels and improve overall hemoglobin counts.",
+                        "impact_of_not_doing": "Untreated iron deficiency can exacerbate anemia and reduce quality of life.",
+                        "frequency": "Take once daily.",
+                        "source": "AAFP and Mayo Clinic 2023 Guidelines.",
+                        "recommendation_short_str": "Oral iron 325 mg daily.",
+                        "frequency_short_str": "Daily."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm with the patient if they have begun the prescribed oral iron therapy and check for any improvement in their symptoms or lab results.",
+                    "supporting_evidence": "The lab reports dated 2024 show iron deficiency anemia with low hemoglobin (9.80 g/dL), low serum iron (42.00 μg/dL), and low transferrin saturation (12.17%). However, there is no documentation indicating that the patient has initiated oral iron therapy, leaving uncertainty regarding their adherence to the recommendation.",
+                    "user_input_questions": [
+                        "Have you started taking the prescribed oral iron supplement (325 mg ferrous sulfate) once daily?",
+                        "Since the recommendation, have you noticed any improvement in your energy levels or other symptoms related to anemia?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Assess hemoglobin and iron studies every 3–6 months to monitor treatment response.",
+                        "importance": "Medium",
+                        "recommendation_reason": "Regular monitoring ensures the therapy is effective and allows for adjustments.",
+                        "benefit": "Facilitates timely modifications to optimize anemia management.",
+                        "impact_of_not_doing": "Lack of monitoring could result in worsening anemia without appropriate intervention.",
+                        "frequency": "Every 3-6 months.",
+                        "source": "PubMed and AAFP Guidelines.",
+                        "recommendation_short_str": "Monitor labs 3-6m.",
+                        "frequency_short_str": "3–6 months."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Obtain recent hemoglobin and iron study laboratory tests to assess current treatment response since the available tests are older than the recommended 3-6 month interval.",
+                    "supporting_evidence": "The patient’s reports from 2024 show abnormal values: a CBC on 2024-06-21 documented a hemoglobin of 9.80 g/dL indicating anemia, and the 2024-04-07 iron study revealed a low serum iron (42 μg/dL) and low transferrin saturation (12.17%). However, these tests are over 6-11 months old relative to the current date (2025-05-31), so it is unclear if the recommended monitoring frequency has been maintained.",
+                    "user_input_questions": [
+                        "Have you had a hemoglobin test in the last 6 months?",
+                        "Have you had an iron studies panel (including serum iron and transferrin saturation) done in the past 6 months?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Have vitamin B12 levels checked annually and supplement if necessary.",
+                        "importance": "Medium",
+                        "recommendation_reason": "B12 deficiency can compound anemia and impact neurological health.",
+                        "benefit": "Maintains proper red blood cell production and energy levels.",
+                        "impact_of_not_doing": "Undiagnosed B12 deficiency may worsen anemia and lead to neurological issues.",
+                        "frequency": "Annually.",
+                        "source": "ASH 2023.",
+                        "recommendation_short_str": "Check B12 annually.",
+                        "frequency_short_str": "Annually."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "It is recommended that you obtain an updated vitamin B12 level test to ensure annual monitoring.",
+                    "supporting_evidence": "The available patient data shows a vitamin B12 test performed on 2024-04-07 with a normal result. However, given that today's date is 2025-05-31, this test is over a year old and does not confirm that the annual check has been completed.",
+                    "user_input_questions": [
+                        "Have you had a vitamin B12 level test in the past 12 months?"
+                    ]
+                }
+            ]
+        },
+        {
             "category_name": "Health Screenings",
             "activities": [
                 {
                     "activity": {
-                        "recommendation": "Have an annual comprehensive physical exam that includes blood pressure measurement, BMI calculation, and medication review.",
+                        "recommendation": "Screen blood glucose and HbA1c levels annually to monitor prediabetes status.",
                         "importance": "High",
-                        "recommendation_reason": "At 44 years old, regular physical examinations are crucial for early detection of conditions common in middle age.",
-                        "benefit": "Early identification of hypertension, obesity, and other conditions can lead to timely interventions.",
-                        "impact_of_not_doing": "Missing regular exams may delay diagnosis of serious health issues, leading to complications.",
-                        "frequency": "Annually",
-                        "source": "USPSTF Adult Preventive Health Care Schedule",
-                        "recommendation_short_str": "Annual physical exam",
-                        "frequency_short_str": "Annually"
+                        "recommendation_reason": "The patient’s borderline glucose values necessitate regular monitoring for diabetes risk.",
+                        "benefit": "Enables early detection of glycemic changes and timely management to prevent diabetes.",
+                        "impact_of_not_doing": "Failure to screen may result in delayed diagnosis and progression to type 2 diabetes.",
+                        "frequency": "Annually.",
+                        "source": "USPSTF and ADA Guidelines.",
+                        "recommendation_short_str": "Annual glucose/HbA1c screening.",
+                        "frequency_short_str": "Annually."
                     },
                     "status": "Completed",
                     "next_step_recommendation": null,
-                    "supporting_evidence": "The patient’s record from 2024-07-01 shows multiple components of a comprehensive physical exam: a blood pressure panel with recorded systolic (101 mm Hg) and diastolic (72 mm Hg) pressures, a documented BMI of 37.3 kg/m² along with weight and height, and a medication reconciliation procedure. These data points indicate that the recommended annual comprehensive physical exam has been completed within the prescribed timeframe.",
+                    "supporting_evidence": "The patient's lab tests from 2024 show that both a fasting glucose (91 mg/dL on 2024-06-21) and an HbA1c (5.9% on 2024-06-21, along with similar values from 2023-05-09 and 2024-01-09) were performed. Since the recommendation calls for an annual screening, and the most recent screening was completed within the past year (given the current date is 2025-05-31), this evidence supports that the recommendation has been met.",
                     "user_input_questions": null
                 },
                 {
                     "activity": {
-                        "recommendation": "Undergo cholesterol screening to assess cardiovascular health.",
+                        "recommendation": "Undergo annual colorectal cancer screening using HSgFOBT or FIT, as recommended for ages 50-75.",
                         "importance": "High",
-                        "recommendation_reason": "Middle-aged men have increased risk of dyslipidemia, which can predispose to heart disease.",
-                        "benefit": "Detecting abnormal cholesterol levels early enables interventions that reduce heart attack and stroke risk.",
-                        "impact_of_not_doing": "Undetected high cholesterol may lead to increased risk of cardiovascular events.",
-                        "frequency": "Every 4-6 years if normal; more frequently if risk factors are present",
-                        "source": "USPSTF and American Heart Association guidelines",
-                        "recommendation_short_str": "Cholesterol screening",
-                        "frequency_short_str": "4-6 yrs"
-                    },
-                    "status": "Completed",
-                    "next_step_recommendation": null,
-                    "supporting_evidence": "The patient's 2022-06-27 lipid panel includes measurements for total cholesterol (149.6 mg/dL), LDL cholesterol (67.1 mg/dL), HDL cholesterol (54.7 mg/dL), and triglycerides (139.1 mg/dL), which indicates that a cholesterol screening was performed. This aligns with the recommendation to undergo cholesterol screening.",
-                    "user_input_questions": null
-                },
-                {
-                    "activity": {
-                        "recommendation": "Plan for colorectal cancer screening starting at age 45 via colonoscopy, FIT, or sigmoidoscopy as recommended.",
-                        "importance": "High",
-                        "recommendation_reason": "Screening is recommended for early detection of colorectal cancer, which dramatically improves outcomes.",
-                        "benefit": "Early detection can significantly improve survival rates and treatment success.",
-                        "impact_of_not_doing": "Delayed screening increases the risk of detecting colorectal cancer at an advanced stage.",
-                        "frequency": "Initiate at age 45, then follow test-specific guidelines",
-                        "source": "USPSTF Colorectal Cancer Screening Recommendations",
-                        "recommendation_short_str": "Plan colorectal screening",
-                        "frequency_short_str": "Start at 45"
+                        "recommendation_reason": "At 74, the patient is within the recommended age range for colorectal cancer screening.",
+                        "benefit": "Early detection significantly improves treatment outcomes and reduces mortality.",
+                        "impact_of_not_doing": "Skipping screening could lead to late-stage cancer diagnosis with lower survival rates.",
+                        "frequency": "Annually.",
+                        "source": "USPSTF.",
+                        "recommendation_short_str": "Annual colorectal screening.",
+                        "frequency_short_str": "Annually."
                     },
                     "status": "Needs user confirmation",
-                    "next_step_recommendation": "Advise the patient to plan for colorectal cancer screening (colonoscopy, FIT, or sigmoidoscopy) when they turn 45.",
-                    "supporting_evidence": "The patient is currently 44 years old and there is no record of any colorectal cancer screening procedure in the health data.",
+                    "next_step_recommendation": "Ask the patient to confirm if they have completed a colorectal cancer screening test (HSgFOBT or FIT) in the past year. If not, recommend scheduling the screening.",
+                    "supporting_evidence": "The patient's data does not include any encounter records or procedure reports indicating that a colorectal cancer screening test (such as HSgFOBT or FIT) was performed, despite being within the recommended age range.",
                     "user_input_questions": [
-                        "Have you already undergone any colorectal cancer screening procedure such as a colonoscopy, FIT, or sigmoidoscopy?",
-                        "Are you planning to schedule colorectal cancer screening when you turn 45?"
+                        "Have you undergone a colorectal cancer screening test (HSgFOBT or FIT) within the last year?"
                     ]
-                }
-            ]
-        },
-        {
-            "category_name": "Immunizations",
-            "activities": [
+                },
                 {
                     "activity": {
-                        "recommendation": "Receive an annual influenza vaccination to reduce the risk of severe influenza and related complications.",
+                        "recommendation": "Screen for hypertension annually in adults over 40.",
+                        "importance": "High",
+                        "recommendation_reason": "Given the patient’s age, regular blood pressure checks are essential to detect hypertension early.",
+                        "benefit": "Early intervention can prevent complications such as heart disease, stroke, and kidney damage.",
+                        "impact_of_not_doing": "Undiagnosed hypertension increases the risk of serious cardiovascular events.",
+                        "frequency": "Annually.",
+                        "source": "USPSTF.",
+                        "recommendation_short_str": "Annual blood pressure check.",
+                        "frequency_short_str": "Annually."
+                    },
+                    "status": "Needs user confirmation",
+                    "next_step_recommendation": "Confirm whether the patient had their blood pressure checked within the past year. If not, schedule an annual screening.",
+                    "supporting_evidence": "The patient's data does not include any blood pressure measurements or encounter records that indicate a screening for hypertension.",
+                    "user_input_questions": [
+                        "Have you had your blood pressure measured within the last 12 months?",
+                        "During your last visit with a healthcare provider, was your blood pressure checked?"
+                    ]
+                },
+                {
+                    "activity": {
+                        "recommendation": "Obtain a one-time abdominal aortic aneurysm ultrasound if criteria are met.",
                         "importance": "Medium",
-                        "recommendation_reason": "Adults should stay current with the flu vaccine, particularly as obesity increases risk for complications.",
-                        "benefit": "Annual immunization helps prevent severe illness and hospitalization due to influenza.",
-                        "impact_of_not_doing": "Skipping the influenza vaccine can increase the risk of flu infection and its complications.",
-                        "frequency": "Annually, every fall",
-                        "source": "CDC Adult Immunization Schedule 2024",
-                        "recommendation_short_str": "Get flu vaccine",
-                        "frequency_short_str": "Yearly"
-                    },
-                    "status": "Completed",
-                    "next_step_recommendation": null,
-                    "supporting_evidence": "The patient's immunization records show that they received an influenza vaccine on 2024-07-01 (Influenza, seasonal, injectable, preservative free), with additional similar records from 2022 and 2020. This indicates that the annual influenza vaccination recommendation has been followed.",
-                    "user_input_questions": null
-                },
-                {
-                    "activity": {
-                        "recommendation": "Obtain a COVID-19 booster in accordance with the latest CDC guidelines to maintain protection against severe illness.",
-                        "importance": "Medium",
-                        "recommendation_reason": "Staying updated with COVID-19 vaccination is essential for ongoing protection, especially in individuals with comorbidities.",
-                        "benefit": "Reduces the risk of severe COVID-19 infection and its complications.",
-                        "impact_of_not_doing": "Lapsing in COVID vaccination may increase susceptibility to severe disease and hospitalization.",
-                        "frequency": "Booster every 6-12 months as recommended for high-risk individuals",
-                        "source": "CDC Adult Immunization Schedule 2024",
-                        "recommendation_short_str": "Get COVID booster",
-                        "frequency_short_str": "6-12 months"
+                        "recommendation_reason": "As a 74-year-old male, early detection of AAA is beneficial, although smoking history is unclear.",
+                        "benefit": "Early detection helps prevent rupture and life-threatening bleeding.",
+                        "impact_of_not_doing": "Undetected AAA can rupture, leading to fatal complications.",
+                        "frequency": "One-time screening.",
+                        "source": "USPSTF.",
+                        "recommendation_short_str": "One-time AAA ultrasound.",
+                        "frequency_short_str": "Once."
                     },
                     "status": "Needs user confirmation",
-                    "next_step_recommendation": "Confirm with the patient whether they have received a COVID-19 booster since their initial vaccinations. If not, advise scheduling a booster as per the current CDC guidelines.",
-                    "supporting_evidence": "The immunization records list COVID-19 vaccinations dated 2021-05-24 and 2021-04-26 without any subsequent booster dose documented, indicating no record of a booster in the patient's health data.",
+                    "next_step_recommendation": "If you have not already, please obtain the recommended one-time abdominal aortic aneurysm ultrasound screening.",
+                    "supporting_evidence": "There are no encounter records or imaging reports in the patient's health data indicating that an abdominal aortic aneurysm ultrasound has been performed.",
                     "user_input_questions": [
-                        "Have you received a COVID-19 booster shot since your vaccines in 2021?",
-                        "Do you have any medical records or documentation showing a recent COVID-19 booster vaccination?"
+                        "Have you ever undergone an abdominal ultrasound to screen for an abdominal aortic aneurysm?"
                     ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Receive a Tdap booster every 10 years to maintain protection against tetanus, diphtheria, and pertussis.",
-                        "importance": "Low",
-                        "recommendation_reason": "Routine Tdap boosters are a standard adult immunization to prevent serious bacterial infections.",
-                        "benefit": "Sustains immunity against tetanus, diphtheria, and pertussis, reducing potential health risks.",
-                        "impact_of_not_doing": "Inadequate immunization can leave one vulnerable to these preventable diseases.",
-                        "frequency": "Every 10 years",
-                        "source": "CDC Adult Immunization Schedule 2024",
-                        "recommendation_short_str": "Tdap booster",
-                        "frequency_short_str": "Every 10 yrs"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Confirm if the booster received in 2022 was a Tdap booster that includes pertussis or a Td booster without the pertussis component.",
-                    "supporting_evidence": "The immunization record from 2022-06-27 indicates the patient received a 'Td (adult)' vaccine, which typically contains tetanus and diphtheria toxoids but does not necessarily include the acellular pertussis component that is required in a Tdap booster.",
-                    "user_input_questions": [
-                        "Did you receive a Tdap booster (one that includes protection against pertussis) instead of a Td booster?",
-                        "Was the booster you received in 2022 specifically labeled as Tdap?"
-                    ]
-                }
-            ]
-        },
-        {
-            "category_name": "Chronic & Lifestyle",
-            "activities": [
-                {
-                    "activity": {
-                        "recommendation": "Engage in at least 150 minutes of moderate-intensity exercise (e.g., brisk walking, cycling) and complete 2 muscle-strengthening sessions each week.",
-                        "importance": "High",
-                        "recommendation_reason": "Regular physical activity is essential for managing severe obesity and prediabetes, as well as improving cardiovascular health.",
-                        "benefit": "Enhances weight management, improves glucose control, supports cardiovascular function, and boosts mental health.",
-                        "impact_of_not_doing": "Lack of exercise increases the risk of worsening obesity, diabetes progression, and cardiovascular complications.",
-                        "frequency": "Weekly: 150 minutes of aerobic activity and 2 muscle-strengthening sessions",
-                        "source": "CDC Physical Activity Guidelines for Americans",
-                        "recommendation_short_str": "150 min exercise + 2 strength",
-                        "frequency_short_str": "Weekly"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Ask the patient whether they have engaged in at least 150 minutes of moderate-intensity exercise and completed 2 muscle-strengthening sessions in the past week.",
-                    "supporting_evidence": "The patient's records include care plans that mention physical exercise and exercise therapy (e.g., the musculoskeletal care plan and diabetes self management plan) but do not provide direct documentation of performed exercises or logged minutes of physical activity.",
-                    "user_input_questions": [
-                        "Have you engaged in at least 150 minutes of moderate-intensity aerobic exercise (such as brisk walking or cycling) in the past week?",
-                        "Have you completed at least 2 muscle-strengthening sessions in the past week?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Review your dietary plan with a registered dietitian and follow a low-glycemic, calorie-controlled diet to achieve 5-10% weight loss over 6-12 months.",
-                        "importance": "High",
-                        "recommendation_reason": "Severe obesity and prediabetes necessitate nutritional intervention to improve metabolic health.",
-                        "benefit": "Promotes sustainable weight loss, improves blood glucose levels, and reduces cardiovascular risks.",
-                        "impact_of_not_doing": "Failure to manage diet can lead to continued obesity, worsening prediabetes, and associated complications.",
-                        "frequency": "Every 3 months",
-                        "source": "ADA Standards of Medical Care 2024 and Obesity Guidelines",
-                        "recommendation_short_str": "Diet consult for weight loss",
-                        "frequency_short_str": "Every 3 mos"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "Confirm if the patient has met with a dietitian and followed the low-glycemic, calorie-controlled diet. If not, advise scheduling a consultation with a registered dietitian.",
-                    "supporting_evidence": "The patient's health record includes a current Diabetes self-management plan that mentions a diabetic diet, but there is no clear evidence of a recent dietary consult, structured nutritional counseling, or documentation about achieving weight loss.",
-                    "user_input_questions": [
-                        "Have you met with a registered dietitian in the past 6-12 months to review your dietary plan?",
-                        "Have you been following a low-glycemic, calorie-controlled diet as recommended for weight loss?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Update your diabetes self-management plan and monitor HbA1c every 6 months to prevent progression of prediabetes.",
-                        "importance": "High",
-                        "recommendation_reason": "Given the presence of prediabetes and obesity, regular monitoring helps in timely intervention.",
-                        "benefit": "Helps prevent the transition to type 2 diabetes and minimizes the risk of complications.",
-                        "impact_of_not_doing": "Inadequate monitoring can lead to poor glycemic control and increased risk of diabetes-related complications.",
-                        "frequency": "Every 6 months",
-                        "source": "ADA Diabetes Standards of Medical Care 2024",
-                        "recommendation_short_str": "Update diabetes plan, HbA1c check",
-                        "frequency_short_str": "Every 6 mos"
-                    },
-                    "status": "Needs user confirmation",
-                    "next_step_recommendation": "If you have not updated your diabetes self-management plan recently or had your HbA1c test within the last 6 months, please update your plan and schedule an HbA1c test.",
-                    "supporting_evidence": "The patient's record shows an ongoing diabetes self-management plan since 2005 and an HbA1c result from 2024-07-01 (6.0%). Given the current date of 2025-05-17, it is unclear if the plan has been updated or if the HbA1c monitoring has followed the recommended 6-month interval.",
-                    "user_input_questions": [
-                        "Have you updated your diabetes self-management plan in the last 6 months?",
-                        "Have you had an HbA1c test within the past 6 months?"
-                    ]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Have an annual kidney function assessment including serum creatinine, eGFR, and urine albumin tests.",
-                        "importance": "High",
-                        "recommendation_reason": "Slightly elevated creatinine levels and risk factors like obesity and prediabetes warrant regular kidney monitoring.",
-                        "benefit": "Early detection of kidney impairment enables timely management to prevent progression to chronic kidney disease.",
-                        "impact_of_not_doing": "Delayed detection of kidney issues can result in irreversible damage and eventual kidney failure.",
-                        "frequency": "Once every 12 months",
-                        "source": "KDIGO Guidelines; ADA Standards 2024",
-                        "recommendation_short_str": "Annual kidney function test",
-                        "frequency_short_str": "Yearly"
-                    },
-                    "status": "Partially completed",
-                    "next_step_recommendation": "Obtain the full panel for kidney function assessment including urine albumin and eGFR calculation, in addition to serum creatinine, to complete the evaluation.",
-                    "supporting_evidence": "The patient's 2024-07-01 basic metabolic panel includes a serum creatinine result (1.4 mg/dL), which is part of the kidney function assessment. However, there is no record of a urine albumin test or explicit eGFR value, which are required for the complete assessment.",
-                    "user_input_questions": ["Have gotten a comprehensive kidney function assessment within the last 12 months?"]
-                },
-                {
-                    "activity": {
-                        "recommendation": "Undergo routine mental health evaluations for anxiety and depression every 6-12 months.",
-                        "importance": "High",
-                        "recommendation_reason": "Documented moderate anxiety and mild depression necessitate regular mental health monitoring.",
-                        "benefit": "Timely intervention can improve overall well-being and prevent worsening of mental health symptoms.",
-                        "impact_of_not_doing": "Failure to monitor mental health may lead to exacerbation of symptoms and reduced quality of life.",
-                        "frequency": "Every 6-12 months",
-                        "source": "USPSTF and APA Guidelines 2024",
-                        "recommendation_short_str": "Mental health evaluation",
-                        "frequency_short_str": "6-12 mos"
-                    },
-                    "status": "Completed",
-                    "next_step_recommendation": null,
-                    "supporting_evidence": "The patient's record from 2024-07-01 shows mental health evaluations including a depression screening using the PHQ-9 and PHQ-2, as well as an anxiety assessment (GAD-7). These evaluations align with the recommendation for routine mental health monitoring every 6-12 months.",
-                    "user_input_questions": null
                 }
             ]
         }
     ],
-    "assessment_date": "2025-05-17 19:44:17"
+    "assessment_date": "2025-05-31 17:42:33"
 }

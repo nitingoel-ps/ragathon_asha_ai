@@ -2,6 +2,13 @@ import os
 import nest_asyncio
 import asyncio
 from app import HealthCareAgent
+from openai import AsyncAzureOpenAI
+from agents import set_default_openai_client
+
+# Disable tracing since we're using Azure OpenAI
+from agents import set_tracing_disabled
+set_tracing_disabled(disabled=True) #This prevents the [non-fatal] Tracing client error 401
+
 
 nest_asyncio.apply()
 
@@ -27,8 +34,8 @@ async def main():
     result = await healthcare_agent.review_patient()
     
     # Print results
-    print("Final Output:")
-    print(result["final_output"])
+    #print("Final Output:")
+    #print(result["final_output"])
     #print("\nMessage History:")
     #print(result["message_history"])
 

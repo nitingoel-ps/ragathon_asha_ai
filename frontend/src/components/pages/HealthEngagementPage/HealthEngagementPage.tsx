@@ -82,7 +82,7 @@ function HealthEngagementPage() {
                 <div className="scoreCard">
                     <ScoreDial score={progress.overallProgress} />
                     <div className="introText">
-                        <h1><span className="highlight">Lisa's</span> Health Engagement Score</h1>
+                        <h1><span className="highlight">Blair's</span> Engagement Score</h1>
                         <p>Shows how you are tracking against established guidelines for health</p>
                     </div>
                 </div>
